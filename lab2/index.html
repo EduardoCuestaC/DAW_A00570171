@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab 1</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+<div align="right">
+    Eduardo Cuesta Córdova
+    <br>
+    A00570171
+</div>
+<div>
+    <h2>Índice</h2>
+    <ul id="index">
+        <li><a href="#art">Artículos</a></li>
+        <li><a href="#forma">Forma</a></li>
+        <li><a href="#preguntas">Preguntas</a></li>
+        <li><a href="#tablas">Tablas</a></li>
+    </ul>
+</div>
+<div id="art">
+    <h1>Algunos discos...</h1>
+    <h2>The Black Saint and the Sinner Lady</h2>
+    <p><strong>The Black Saint and the Sinner Lady</strong> es uno de los más grandes logros de orquestación en la historia del jazz. Charles Mingus diseñó conscientemente el ballet de seis partes como su magnum opus que -- puesto en evidencia por la famosa inclusión de las notas de su psicólogo -- es tabién tanto una examinación de su propio psique torturado como una pieza conceptual acerca del amor y la lucha. <i>Allmusic,Steve Huey</i></p>
+    <p><img src="images/the-black-saint-and-the-sinner-lady.jpg" height="200"></p>
+    <h2>Blue Train</h2>
+    <p>A pesar de que nunca fue formalmente firmado, <strong>Blue Train</strong> fue publicado en honor a un acuerdo oral entre John Coltrane y el fundador de Blue Note Records, Alfred Lion, volviéndose la única colección de Coltrane publicada bajo la firma. El disco está repleto de evidencia sólida de las habilidades innatas de liderazgo de Coltrane. <i>Allmusic, Lindsay Planer.</i></p>
+    <p><img src="images/blue-train.jpg" height="200"></p>
+</div>
+<div id="forma">
+    <hr>
+    <form>
+        <p>
+            Nombre:
+            <input type="text" placeholder="Juan López">
+        </p>
+        <p>
+            Contraseña:
+            <input type="password">
+        </p>
+        <select>
+            <option value="0">Elige una opción</option>
+            <option name="firstoption">a.</option>
+            <option name="secondoption">b.</option>
+        </select>
+        <p>
+            <textarea>
+            </textarea>
+        </p>
+        <input title="c1" type="checkbox" value="1"> 1
+        <br>
+        <input title="c2" type="checkbox" value="2"> 2
+        <br>
+        <input title="r1" type="radio" value="a"> a
+        <br>
+        <input title="r2" type="radio" value="b"> b
+        <br>
+        <br>
+        <input title="list" list="dataList">
+        <datalist id="dataList">
+            <option value="option 1">note 1</option>
+            <option value="option 2">note 2</option>
+        </datalist>
+        <br>
+        <br>
+        <p>
+            <button type="submit">Enviar</button>
+        </p>
+        <br>
+    </form>
+    <hr>
+</div>
+<div id="preguntas">
+    <h3>URL</h3>
+    <p>Uniform Resource Localizer, una cadena de caracteres que corresponde únicamente a la ubicación de un  recurso en la red, que pemite que sea encontrado por un navegador.</p>
+    <br>
+    <h3>MIME</h3>
+    <p>El tipo de Multipurpose Internet Mail Extensions es un estándar para indiar el tipo y formato de un documento. Permite al navegador decidir cómo procesar los datos que recibe.</p>
+    <br>
+    <h3>XML</h3>
+    <p>Extensible Markup Language, permite al usuario definir conjuntos de etiquetas o "markups" para facilitar la lectura y procesamiento de conjuntos de datos.</p>
+    <br>
+    <h3>XHTML</h3>
+    <p>Añade a html etiquetas de otras herramientas xml y facilita el procesamiento de ese tipo de documentos.</p>
+    <br>
+    <h3>HTML5</h3>
+    <p>Última revisión del estándar HTML, incorpora XHTML y añade más componentes con significado semántico.</p>
+    <br>
+    <h3>Javascript</h3>
+    <p>Variación del estándar ECMAScript, un lenguaje de programación orientado a objetos, basado en prototipos, imperativo, débilmente tipado y dinámico que se utiliza para dinamizar y mejorar interfaces web desde el código que ejecuta el cliente.</p>
+    <br>
+    <h3>php</h3>
+    <p>Lenguaje de programación de código abierto orientado al desarrollo web que puede ser incrustado en HTML. El código escrito en este lenguaje se ejecuta en el servidor (por lo que permanece oculto del usuario), generando HTML y mandándoselo al cliente.</p>
+    <br>
+    <h3>JSP</h3>
+    <p>Java Server Pages permite la creación de páginas web dinámicas basadas en HTML y XML de la misma forma que PHP, pero utiliza Java como lenguaje de programación. Es necesario correrlo en servidores compatibles con contenedores servlet.</p>
+    <br>
+    <h3>AJAX</h3>
+    <p>Acrónimo de Asynchronous JavaScript and XML, premite la creación de aplicaciones interactivas o Rich Internet Applications que se ejecutan en el cliente mientras se mantiene una comunicación asíncrona con el servidor en segundo plano (sin intervenir con la visualización o el comportamiento de la página). Elimina la necesidad del actualizado de páginas, por lo que aumenta la velocidad y usabilidad de las aplicaciones.</p>
+    <br>
+</div>
+<div>
+    <h3>Métodos de petición HTTP</h3>
+    <h4 class="centered-sectiontitle">GET</h4>
+    <p>Solicita un recurso específico, solo debe recuperar datos.</p>
+    <br>
+    <h4 class="centered-sectiontitle">HEAD</h4>
+    <p>Únicamente pide el header de una respuesta.</p>
+    <br>
+    <h4 class="centered-sectiontitle">POST</h4>
+    <p>Envía cierto recurso a una entidad, causando cambios en el servidor.</p>
+    <br>
+    <h4 class="centered-sectiontitle">PUT</h4>
+    <p>Reemplaza todas las presentaciones de cierto recurso en el servidor por lo que se envía junto con la petición.</p>
+    <br>
+    <h4 class="centered-sectiontitle">DELETE</h4>
+    <p>Borra el recurso especificado del servidor.</p>
+    <br>
+    <h4 class="centered-sectiontitle">PATCH</h4>
+    <p>Modifica parcialmente un recurso en el servidor.</p>
+    <br>
+    <p>Para enviar un formulario HTML es necesario utilizar el método POST.</p>
+    <p>Para acceder a una página a través de un navegador, es necesario utilizar el método GET, junto con la URL del recurso que se desea mostrar.</p>
+    <p>El código 200 indica que la petición realizada al servidor se ha llevado a cabo con éxito.</p>
+    <p>El código 404 indica que el recurso requerido no está disponible, por lo que no suele ser responsabilidad del desarrollador corregirlo</p>
+    <p>El código 500 se manda cuando el servidor encuentra una condición inesperada y no puede satisfacer la petición del usuario. Es responsabilidad del desarrollador asegurar que el servidor funcione correctamente.</p>
+    <p>Un elemento depreciado es aquél que ya no forma parte de la especificación del lenguaje. Algunos navegadores mantienen el soporte para componentes obsoletos para asegurar la compatibilidad con una mayor cantidad de páginas.</p>
+    Algunos elementos depreciados:
+    <ul>
+        <li>applet - Inserta una applet de java. Actualmente se usa object.</li>
+        <li>center - Centra los elementos dentro de la etiqueta. Ahora se hace desde la hoja de estilos o utilizando align="center"</li>
+        <li>font - Aplica una fuente. Ahora se hace en CSS.</li>
+        <li>menu - Para listas de menú. Actualmente se utiliza li.</li>
+    </ul>
+    <br>
+    <h4>Diferencias principales entre HTML 4 y 5:</h4>
+    HTML5 añade...
+    <ul>
+        <li>sintaxis simplificada y más clara</li>
+        <li>tags para audio y video</li>
+        <li>servicios de geolocalización</li>
+        <li>comunicación full-duplex entre servidor y cliente</li>
+        <li>JavaScript se ejecuta en un thread separado</li>
+        <li>hr se utiliza como separación temática, se introduce article</li>
+        <li>compatibilidad con menos navegadores (debido a lo reciente que es)</li>
+    </ul>
+</div>
+<div id="tablas">
+    <h3>Tablas</h3>
+    <p>Se puede fusionar celdas y editar la anchura del borde, el color de fondo, el alineamiento, la cantidad de columnas y filas y algunos elementos del estilo de texto de cada celda.</p>
+    <table border="2" bgcolor="lightblue">
+        <thead>
+        <tr>
+            <td colspan="2">colspan</td>
+            <td>head3</td>
+        </tr>
+        <tr>
+            <td>
+                head1
+            </td>
+            <td>
+                <i>
+                    head2
+                </i>
+            </td>
+            <td>
+                head3
+            </td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>
+                body1
+            </td>
+            <td>
+                body2
+            </td>
+            <td rowspan="2">
+                rowspan
+            </td>
+        </tr>
+        <tr>
+            <td>
+                body1
+            </td>
+            <td>
+                body2
+            </td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td>
+                foot1
+            </td>
+            <td>
+                foot2
+            </td>
+            <td>
+                foot3
+            </td>
+        </tr>
+        </tfoot>
+    </table>
+</div>
+<div>
+    <p>Los principales controles de una forma HTML son botones, textareas, inputs (incluyendo radio buttons, checkboxes, password, text, etc.).</p>
+</div>
+<div>
+    <h2>Investigación 1</h2>
+    <h3>Ciclo de vida de un sistema de información</h3>
+    <p>El ciclo de vida de un sistema de información abarca desde la detección de la necesidad que lo requiere hasta cuando se convierte en obsoleto y es reemplazado por otro. El  modelo más aceptado de estos ciclos es el ciclo de vida en cascada, integrado por etapas con un resultado definido (documentos, programas) que deben completarse individualmente y en un orden definido para progresar. Inv estigación preliminar: Determinación de problemas y causas, planteamiento de objetivos, aclaración de requisitos, análisis de costos y beneficios (estudios de factibilidad), a través de observaciones, entrevistas y examinación de documentos y sistemas existentes.
+    <p>Análisis detallado de la situación del cliente: Comprensión detallada de las necesidades y el flujo de información del grupo para el que se desarrolla el sistema. Generación de descripciones y estudios escritos.</p>
+    <p>Diseño del sistema: especificación de los elementos que conformarán el sistema de información, especificación de metodologías para asegurar su funcionamiento.</p>
+    <p>Implementación: Prototipado, desarrollo del sistema e introducción experimental (ya sea en paralelo a los sistemas existentes o por módulos).</p>
+    <p>Mantenimiento: adecuación del sistema en respuesta a los cambios en el entorno de los usuarios (hardware, factores humanos) y a la aparición de nuevas necesidades. Control cuidadoso de versiones. Solo se concluye cuando el sistema se vuelve obsoleto.</p>
+    <h3>Ciclo de desarrollo de un sistema de información</h3>
+    <p>El ciclo de desarrollo de un sistema de información comienza cuando están establecidos los requisitos, e involucra la creación de todos los modelos para el diseño del
+        sistema (de casos de uso, de actividad, de clases) y su implementación en código, así como la generación de prototipos, las pruebas y el despliegue del sistema</p>
+
+</div>
+<div>
+    <h3>Laboratorio CSS</h3>
+    <p>Es recomendable no utilizarlo y preferir el diseño consciente de cascadas de estilos. Suele fallar y ocasionar problemas cuando se utilizan frameworks de css.</p>
+    <p>Es importante tener cuidado al elegir imágenes de fondo, dado que suelen deformarse con los (muy comunes) cambios en el tamaño de la pantalla, perjudicando la experiencia del usuario.
+    Es recomendable usar imagenes pequeñas con fondo transparente sobre un color sólido, o dejar de mostrar la imagen a partir de cierto tamaño de la pantalla.</p>
+    <p>Px se utiliza cuando se desea clarificar la apariencia de un elemento pequeño, de elementos cercanos al centro de la página o para algunas separaciones verticales. % permite que los elementos de la página ajusten su tamaño a</p>
+una fracción del tamaño total que tenga la página en la pantalla en que se esté mostrando. Es útil para que las páginas se muestren adecuadamente en dispositivos con varias resoluciones. pt se utiliza sobre todo para definir el tamaño del
+    texto, y representa un espacio de tamaño tanto en la página como en impresiones.</p>
+    <p>Los espacios auentan el tamaño del archivo de estilos, por lo que omitirlos minimizándolo reduce la cantidad de peticiones http necesarias para obtenerlo y el tamaño de la descarga, disminuyendo el tiempo de carga del sitio.</p>
+</div>
+<div>
+    <h3>Referencias</h3>
+    <p>MIME types. Mozilla. <a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">Link. MDN web docs.</a> </p>
+    <p>Métodos de petición HTTP. Mozilla. <a href="https://developer.mozilla.org/es/docs/Web/HTTP/Methods"> Link.</a> MDN web docs. </p>
+    <p>¿Qué es PHP?.<a href="http://php.net/manual/es/intro-whatis.php">Link.</a> Manual de PHP.</p>
+    <p>Fielding et al. Status code definitions.<a href="https://www.w3.org/Protocols/rfc2616/rfc2616-sec10.html">Link.</a> Hypertext Transfer Protocol -- HTTP/1.1</p>
+    <p>HTML4 vs HTML5 comparison.<a href="https://www.go4expert.com/articles/html4-vs-html5-comparison-t30141">Link.</a>G04Expert.</p>
+    <p>W3 Schools. Deprecated. <a href="https://www.w3schools.com/tags/deprecated.htm">Link.</a></p>
+    <p>What is a deprecated tag/attribute?, adaptado de Web Design in a Nutshell<a href="https://www.codehelp.co.uk/html/deprecated.html">Link. </a>Codehelp.</p>
+    <p>Ciclo de vida de los sistemas de información y conocimientos. <a href="https://www.ecured.cu/Ciclo_de_vida_de_los_sistemas_de_informaci%C3%B3n_y_conocimientos">Link.</a> Ecured.</p>
+</div>
+</body>
+</html>

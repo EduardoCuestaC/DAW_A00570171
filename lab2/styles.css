@@ -1,0 +1,36 @@
+body{
+    background-color: lightblue;
+    font-family: verdana;
+}
+h2{
+    text-align: right;
+    color: darkblue;
+    font-family: sans-serif;
+}
+#index{
+    text-align:right;
+    text-decoration:none;
+    color:purple;
+}
+#art{
+    background-color: yellow;
+    color: purple;
+    text-align: center;
+}
+#forma{
+    background-color:green;
+    color: white;
+    width:70%;
+    margin-left:15%;
+    padding-left:40px;
+    padding-top:10px;
+}
+.centered-sectiontitle{
+    text-align: center;
+    color: red;
+    size: 20px;
+}
+
+table{
+    align-self:center;
+}
