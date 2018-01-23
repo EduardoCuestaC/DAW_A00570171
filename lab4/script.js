@@ -16,11 +16,13 @@ function first(){
 function second(){
     var a = Math.floor(Math.random()*10);
     var b = Math.floor(Math.random()*10);
+    var d = Date.now();
     var c = prompt("cuánto es "+a+" + "+b+" ?");
     if(c==a+b)
         document.write("correcto!");
     else
-        document.write("incorrecto, la respuesta es "+(a+b));
+        document.write("incorrecto, la respuesta es "+(a+b)+"<br>");
+    document.write((Date.now()-d)/1000+" segundos");
     writeBackButton();
 }
 
