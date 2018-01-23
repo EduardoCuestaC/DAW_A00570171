@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab4</title>
+</head>
+<body>
+<div id="menu">
+    <button onclick="first()">1</button>
+    <button onclick="second()">2</button>
+    <button onclick="third()">3</button>
+    <button onclick="fourth()">4</button>
+    <button onclick="fifth()">5</button>
+    <button onclick="mymain()">6</button>
+</div>
+<div id="output">
+
+</div>
+<div>
+    <p>El sexto botón corre en la consola una demostración de herencia y creación de objetos con prototipos en javascript.</p>
+    <br>
+    <h4>Semejanzas y diferencias entre Java y Javascript:</h4>
+    <p>La orientación a objetos en Javascript no utiliza el mismo sistema de clases que Java, sino que hace uso de prototipos
+    para establecer funciones miembro, así como crear herencias y polimorfismo.</p>
+    <h4>Métodos para objetos Date:</h4>
+    <ul>
+        <li>.toString(): regresa un string con el día de la semana, mes, día del mes, año, hora y zona horaria.</li>
+        <li>.toUTCString(): regresa un string en el formato UTC ("día, núm.día mes año horas:minutos:segundos zona horaria.</li>
+        <li>.now(): regresa el número de milisegundos que han pasado desde el primero de enero de 1970.</li>
+        <li>.setHours(): permite ajustar la hora del objeto Date sin alterar minutos ni segundos.</li>
+        <li>.setYear(): ajusta el año del objeto sin modificar los demás valores.</li>
+    </ul>
+    <h4>Métodos para objetos Array</h4>
+    <ul>
+        <li>.filter():  recibe una función como parámetro y regresa un array con los elementos que hicieron que la función regresara true.</li>
+        <li>.map(): recibe una función como parámetro y construye un nuevo array con los valores que regresan de ella.</li>
+        <li>.forEach(): recibe una función como parámetro y la ejecuta con cada uno de los elementos del array.</li>
+        <li>.slice(): regresa una copia del array original que solo contiene los elementos desde el inicio hasta el índice especificado como parámetro. No modifica al array desde el que es llamada (al contrario de .splice()).</li>
+        <li>.reverse(): invierte el orden de los elementos del array.</li>
+    </ul>
+    <h4>Variables de enfoque local en javascript</h4>
+    <p>Usando let en lugar de var puede declararse una variable o función que únicamente existe dentro del bloque de código en que fue
+    creada. Es recomendable utilzarla únicamente para variables temporales dentro de ciclos de control para evitar
+    conflictos en otras partes del código si se utilizan los mismos nombres.</p>
+    <p><strong>Declarar una variable como var dentro de una función</strong> le da un enfoque local, por lo que no afecta al resto del código</p>
+    <h4>Expresiones regulares en strings</h4>
+    <p>Puede usarse el método -string-.match(-expresión regular-) para obtener la primera sección de un string que contiene un formato específico
+    (descrito por el objeto de expresión regular). También puede usarse -expresión regular-.test(-string-) para comprobar si un string cumple con cierto formato.
+    Las expresiones regulares son útiles en aplicaciones web para comprobar el formato de los campos de una forma. Es posible escribir expresiones
+    regulares que describan teléfonos, direcciones, correos electrónicos, etc. y luego probarlas contra los valores que ingresa el usuario para asegurar que
+    la información obtenida por la forma satisfaga las condiciones que requiere la aplicación para procesarla adecuadamente.</p>
+    <br>
+    <h4>Referencias</h4>
+    <ul>
+        <li>Array. Mozilla MDN. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Array">URL.</a></li>
+        <li>Date. Mozilla MDN. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Objetos_globales/Date">URL.</a></li>
+        <li>Let. Mozilla MDN. <a href="https://developer.mozilla.org/es/docs/Web/JavaScript/Referencia/Sentencias/let">URL.</a></li>
+    </ul>
+
+</div>
+<script src="script.js"></script>
+<script src="proto.js"></script>
+</body>
+</html>
