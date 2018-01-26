@@ -1,0 +1,20 @@
+.labMenu a{
+    background-color:blue;
+    color:white;
+    text-decoration:none;
+    font-family: sans-serif, Arial;
+    font-size: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 60px;
+    padding-right:60px;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.labMenu a:hover{
+    background-color:lightblue;
+}
+.labMenu{
+    margin-top: 100px;
+    margin-left:20%;
+}

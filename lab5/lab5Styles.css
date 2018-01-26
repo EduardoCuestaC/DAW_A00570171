@@ -1,0 +1,34 @@
+.form button, input, label{
+    display:block;
+}
+.numberInput{
+    width:40px;
+    display: inline;
+}
+td label{
+    display:inline;
+}
+#formdiv{
+    background-color:lightgreen;
+    font-family:sans-serif, Arial;
+    padding-top:20px;
+    padding-bottom:30px;
+    padding-left:10px;
+    padding-right:10px;
+    margin-left:30%;
+    margin-right:30%;
+}
+
+#infodiv{
+    background-color:lightblue;
+    color:darkblue;
+    text-align: center;
+    font-family:sans-serif, Arial;
+    padding-top:20px;
+    padding-bottom:30px;
+    padding-left:20px;
+    padding-right:20px;
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:40px;
+}

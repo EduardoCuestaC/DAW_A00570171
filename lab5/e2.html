@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="lab5Styles.css">
+</head>
+<body>
+    <table id="productos">
+        <tr>
+            <td>
+                <img title="libreta" src="libreta.jpg" height="150">
+            </td>
+            <td>
+                Precio: $30 + IVA.
+                <br>
+                Descripción: Amarilla, cien hojas blancas.
+            </td>
+            <td>
+                <label>Cantidad:</label>
+                <br>
+                <input class="numberInput" type="number" id="nlibretas">/<label id="maxlibretas">2</label>
+                <br>
+                <br>
+                <button id="libreta">Comprar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img title="botella" src="botella.jpg" height="150">
+            </td>
+            <td>
+                Precio: $10 + IVA.
+                <br>
+                Descripción: 600 ml, agua natural.
+            </td>
+            <td>
+                <label>Cantidad:</label>
+                <br>
+                <input class="numberInput" type="number" id="nbotellas">/<label id="maxbotellas">5</label>
+                <br>
+                <br>
+                <button id="botella">Comprar</button>
+            </td>
+        </tr>
+        <tr>
+            <td>
+                <img title="mochila" src="mochila.jpg" height="150">
+            </td>
+            <td>
+                Precio: $100 + IVA.
+                <br>
+                Descripción: Negra, dos bolsas.
+            </td>
+            <td>
+                <label>Cantidad:</label>
+                <br>
+                <input class="numberInput" type="number" id="nmochilas">/<label id="maxmochilas">5</label>
+                <br>
+                <br>
+                <button id="mochila">Comprar</button>
+            </td>
+        </tr>
+    </table>
+    <p align="center" id="totalDisplay">Total: $0.00</p>
+    <script type="text/javascript" src="e2Script.js"></script>
+</body>
+</html>
