@@ -1,0 +1,24 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script type="text/javascript" src="dragdropscript.js"></script>
+</head>
+<body>
+
+<div class="dropdivcontainer">
+    LIBRETA
+    <div class="dropdiv" id="div1" ondrop="wrapDropLibreta(event)" ondragover="allowDrop(event)"></div>
+</div>
+<div class="dropdivcontainer">
+    MOCHILA
+    <div class="dropdiv" id="div2" ondrop="wrapDropMochila(event)" ondragover="allowDrop(event)"></div>
+</div>
+<br>
+<img id="drag1" src="libreta.jpg" draggable="true"
+     ondragstart="drag(event)" width="70" height="100">
+
+<br>
+<a href="index.html">volver al inicio</a>
+</body>
+</html>

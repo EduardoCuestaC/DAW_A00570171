@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="styles.css">
+    <title>x</title>
+</head>
+<body>
+    <div class="watermark">
+        Documento interactivo
+    </div>
+    <p id="toChangeStyle">
+        La tortolita azul, cococha o columbita común (Columbina passerina) es una especie de ave columbiforme de la
+        familia Columbidae. Es una pequeña paloma tropical del Nuevo Mundo que se encuentra en Bermudas,
+        sur de Estados Unidos, México, el Caribe y Sudamérica, tan al sur como el nordeste de Brasil.
+    </p>
+    <div id="blinking"></div>
+    <br>
+    <button id="stopBlink">parar parpadeo</button>
+    <br>
+    <br>
+    <form name="form" onsubmit="return false">
+        <input type="text" name="name">
+        <div id="tips">
+        </div>
+    </form>
+    <br>
+    <a href="dd.html">ir a drag and drop</a>
+    <div>
+        <h4>Propiedades de posición:</h4>
+        <p>Static: ignora los efectos de otras propiedades de posición y
+            configura su posición de acuerdo las configuraciones normales de la página.</p>
+        <p>Relative: la posición de un elemento se configura en relación con su posición original
+            con los vlaores de las propiedades left, right, bottom y top. El contenido alrededor del
+            elemento no será ajustado para llenar el blanco dejado por el cambio en la posición.</p>
+        <p>Fixed: posiciona a un elemento en relación a la ventana, manteniendo su posición a pesar del scroll. Los
+            elementos reposicionados no dejan un hueco en la página en su posición inicial.</p>
+        <p>Absolute: la posición del elemento se configura en relación a su ancestro más cercano.</p>
+        <p>Sticky: El elemento permanece como relative cuando no se ha pasado su altura. En caso contrario, pasa a estar fixed.</p>
+        <h4>Visibility</h4>
+        <p>El valor default es visible. Hidden oculta un elemento, pero deja un espacio vacío en la página.
+        Collapse elimina una columna o fila de una tabla sin cambiar la organización de esta. Inherit iguala
+        la visibilidad de su elemento padre.</p>
+        <h4>Z-index</h4>
+        <p>Representa el orden en que se renderiza un elemento en relación con los demás. Los elementos con mayor orden se
+            sobreponen a los de menor.</p>
+    </div>
+    <br>
+    <div>
+        <h4>Fuentes:</h4>
+        <p>W3Schools. CSS Positioning. <a href="https://www.w3schools.com/css/css_positioning.asp">URL.</a></p>
+        <p>W3Schools. CSS Visibility. <a href="https://www.w3schools.com/cssref/pr_class_visibility.asp">URL.</a></p>
+    </div>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+</html>
