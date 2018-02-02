@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>lab7</title>
+    <link rel="stylesheet" href="..\bootstrap\bootstrap-4.0.0-beta.2-dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="..\bootstrap\bootstrap-4.0.0-beta.2-dist\js\jquery-3.2.1.js"></script>
+    <script src="..\bootstrap\bootstrap-4.0.0-beta.2-dist\js\bootstrap.bundle.js"></script>
+</head>
+<body>
+<br>
+<header id="mHeader">
+    <h1>Página</h1>
+</header>
+<br>
+<div id="mCF" class="container-fluid">
+    <div class="sticky-top">
+    <nav id="myNav" class="navbar navbar-light bg-light">
+        <a class="navbar-brand" href="#">Brand</a>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Link2</a>
+            </li>
+            <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle"
+                   data-toggle="dropdown" href="#"
+                   role="button"
+                   aria-haspopup="true"
+                   aria-expanded="false">
+                    Dropdown
+                </a>
+                <div class="dropdown-menu">
+                    <a class="dropdown-item" href="#">Sublink1</a>
+                    <a class="dropdown-item" href="#">Sublink2</a>
+                </div>
+            </li>
+        </ul>
+        <ul class="nav ml-auto">
+            <li class="nav-item">
+                <a id="biz" class="nav-link" href="#">A la derecha</a>
+            </li>
+        </ul>
+    </nav>
+    </div>
+    <br>
+    <div class="container">
+        <div class="jumbotron">
+            <h1>Material design</h1>
+            <p>Material design es un conjunto de principios de diseño inicialmente planteados para aplicaciones móviles
+            que busca facilitar y uniformizar el diseño de aplicaciones para brindar una mejor experiencia al usuario.
+            Existe una gran cantidad de APIs móviles y varios frameworks de diseño web que adoptan estos principios
+            y permiten su implementación modular.</p>
+            <br>
+        </div>
+        <h4>Lorem ipsum</h4>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis vehicula, nulla et venenatis lobortis, lectus arcu pulvinar neque, ac interdum lectus quam in velit. Donec suscipit porttitor suscipit. Mauris at tellus consequat, bibendum quam a, porta ante. Curabitur iaculis rhoncus sapien vel finibus. Curabitur luctus imperdiet ipsum vel venenatis. Mauris vehicula laoreet sagittis. Mauris ultricies diam dolor, eu condimentum felis iaculis vel. Praesent ut velit vel felis tristique pellentesque. Phasellus magna massa, tempus egestas finibus in, tempus ut lacus. Nunc dictum quam id risus efficitur, vitae pellentesque dolor mattis. Maecenas et eros sit amet nisl ornare viverra lobortis id turpis. Nullam dapibus ipsum sed interdum vulputate. Etiam in leo gravida, hendrerit odio sit amet, consectetur metus. Vestibulum nec enim iaculis, egestas odio sit amet, feugiat odio. Donec eget tempus risus.
+        </p>
+        <h4>Suspendisse bibendum magna</h4>
+        <p> Suspendisse bibendum magna eget est dignissim porttitor. Vestibulum posuere est sit amet mauris interdum, eget mollis lorem pharetra. In nulla nunc, sagittis a sapien tempus, rhoncus vehicula urna. Suspendisse nec pulvinar massa. Ut ornare sed ligula sit amet volutpat. Morbi pharetra mi id nunc dictum, id consequat ligula feugiat. Morbi ac consectetur lacus. Maecenas ullamcorper iaculis enim, non elementum nunc interdum ut. Aliquam in facilisis justo, id mattis sem. Etiam in dignissim tortor.
+        </p>
+    </div>
+    <br>
+    <div class="container">
+        <label>Lorem ipsum</label>
+        <input type="text" class="form-control" placeholder="Dolor sit amet..." aria-label="Username" aria-describedby="basic-addon1">
+    </div>
+    <div class="text-center">
+        <br>
+        <button type="button" class="btn btn-default">Enviar</button>
+        <br>
+        <br>
+        <br>
+        <br>
+        <button type="button" class="btn btn-default modalButton font-weight-bold" data-toggle="modal" data-target="#mModal">Abrir modal</button>
+    </div>
+    <br>
+    <br>
+    <p>
+        Fuentes:
+        <a href="https://material.io/">Sitio principal de Material Design</a>.
+    </p>
+
+
+    <div id="mModal" class="modal fade" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Lorem ipsum</h4>
+                </div>
+                <div class="modal-body">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum arcu enim, venenatis vel diam id, iaculis facilisis turpis. Pellentesque ornare, nunc in venenatis semper, nisl leo mollis tellus, at pellentesque ex dui vel tellus. Vivamus eu tincidunt ante. Nulla pretium elementum convallis.</p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default modalButton" data-dismiss="modal">Cerrar</button>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
