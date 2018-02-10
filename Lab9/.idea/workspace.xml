@@ -14,11 +14,22 @@
       <file leaf-file-name="index.php" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.php">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="140" column="33" lean-forward="true" selection-start-line="140" selection-start-column="33" selection-end-line="140" selection-end-column="33" />
+            <state relative-caret-position="289">
+              <caret line="23" column="118" lean-forward="false" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
               <folding>
-                <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+                <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+                <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="styles.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/styles.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -29,6 +40,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="CSS File" />
       </list>
     </option>
   </component>
@@ -36,6 +48,7 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/p.html" />
+        <option value="$PROJECT_DIR$/styles.css" />
         <option value="$PROJECT_DIR$/index.php" />
       </list>
     </option>
@@ -68,7 +81,6 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
@@ -81,12 +93,14 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -118,14 +132,16 @@
       <workItem from="1518130585510" duration="4333000" />
       <workItem from="1518138866582" duration="272000" />
       <workItem from="1518146415169" duration="2184000" />
+      <workItem from="1518237995138" duration="1750000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="19489000" />
+    <option name="totallyTimeSpent" value="21239000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24963397" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
@@ -165,7 +181,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
           </folding>
         </state>
       </provider>
@@ -175,7 +192,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
           </folding>
         </state>
       </provider>
@@ -185,7 +203,8 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
           </folding>
         </state>
       </provider>
@@ -195,18 +214,39 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/p.html" />
+    <entry file="file://$PROJECT_DIR$/styles.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="22" lean-forward="false" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="140" column="33" lean-forward="true" selection-start-line="140" selection-start-column="33" selection-end-line="140" selection-end-column="33" />
+        <state relative-caret-position="289">
+          <caret line="23" column="118" lean-forward="false" selection-start-line="23" selection-start-column="118" selection-end-line="23" selection-end-column="118" />
           <folding>
-            <marker date="1518150180684" expanded="true" signature="3921:3966" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5148:5193" ph="..." />
+            <marker date="1518239746237" expanded="true" signature="5659:5675" ph="..." />
           </folding>
         </state>
       </provider>

@@ -3,8 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="..\bootstrap\bootstrap-4.0.0-beta.2-dist\css\bootstrap.min.css">
+    <link rel="stylesheet" href="styles.css">
+    <script src="..\bootstrap\bootstrap-4.0.0-beta.2-dist\js\jquery-3.2.1.js"></script>
+    <script src="..\bootstrap\bootstrap-4.0.0-beta.2-dist\js\bootstrap.bundle.js"></script>
 </head>
 <body>
+<div class="container">
     <p>
         Phpinfo muestra información sobre el estado del PHP que se está ejecutando, permitiendo a quien use el comando conocer
         la versión, extensiones, versión del sistema operativo, información del servidor, opciones de compilación, rutas y configuraciones.
@@ -15,7 +20,10 @@
         y Request (con toda la información de get, post y cookie).
     </p>
     <p>
-
+        Es recomendable reemplazar el contenido del archivo php.ini por lo que está en php.ini-production cuando se desea publicar la aplicación web.
+        Para que los cambios se efectúen, el servidor debe reiniciarse. Las configuraciones del archivo de producción suelen limitar el tamaño de las variables
+        globales, la cantidad de memoria que puede dejarse para la ejecución de php, el tamaño máximo de archivos que pueden subirse
+        al servidor e impedir el display de errores, entre otras cosas.
     </p>
     <p>
         Un archivo con la extensión .php está comprendido por una serie de etiquetas HTML y scripts que se ejecutan en un servidor.
@@ -25,15 +33,19 @@
     <h5>Fuentes:</h5>
     <p>HTML.net. Lesson 1: What is PHP.<a href="http://html.net/tutorials/php/lesson1.php">URL</a>.</p>
     <p>PHP.net. Phpinfo. <a href="http://php.net/manual/es/function.phpinfo.php">URL</a>.</p>
-    <p>PHP.net. Phpinfo. <a href=http://php.net/manual/es/language.variables.superglobals.php>URL</a>.</p>
-
+    <p>PHP.net. Superglobals. <a href="http://php.net/manual/es/language.variables.superglobals.php">URL</a>.</p>
+    <p>Serverpress. Switch between development and production php ini. <a href="https://serverpress.com/forums/topic/switch-between-development-and-production-php-ini">URL</a>.</p>
+    <p>PHP.net. Superglobals. <a href="http://php.net/manual/es/language.variables.superglobals.php">URL</a>.</p>
+    <div class="jumbotron">
     <h3>Ejercicios:</h3>
     <form method="post">
-        arreglo (números separados por comas): <input type="text" name="st">
+        arreglo (números separados por comas): <br><input type="text" name="st">
         <br>
-        número: <input type="number" name="n">
+        número: <br><input type="number" name="n">
+        <br><br>
         <button type="submit">Enviar</button>
     </form>
+    </div>
 
 <?php
 /**
@@ -146,11 +158,12 @@ if(count($_POST)>0){
 }
 echo "<br><br>";
 $dog1 = new Dog(20, "negro");
-echo "<h3>Ejercicio extra (herencia de clases en php):</h3><br>";
+echo "<div class=\"blu container-fluid\"><h3>Ejercicio extra (herencia de clases en php):</h3><br>";
 $dog1->speak();
 echo "<br>";
 $dog1->reportInfo();
-
+echo "</div>";
 ?>
+    <div>
 </body>
 </html>
