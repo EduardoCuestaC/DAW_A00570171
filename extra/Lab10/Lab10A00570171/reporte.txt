@@ -1,0 +1,19 @@
+¿Qué muestra la instrucción sp_help Material? 
+Muestra información sobre el tiempo en que se creó la tabla, su creador, tipo, nombre, así como los tipos de dato, longitud y particularidades de cada columna.
+
+¿Qué efecto tuvo ejecutar el archivo crear.sql?
+Creó las cuatro tablas en el servidor
+
+¿Qué utilidad tiene esta manera de ejecutar los comandos de SQL?
+Crea todas las tablas en un solo script
+
+¿Qué relación tienen con las tablas de la base de datos? 
+Los archivos contienen información para llenar las tablas, son tablas 
+
+¿Qué relación tiene el contenido de este archivo (materiales.sql) con el formato en que se encuentran los datos en el archivo materiales.csv?
+Materiales.sql declara el formato en el que están los datos a cargarse (columnas separadas por ‘,’, filas separadas por ‘\n’)
+
+¿Qué sucedió al ejecutar el comando SELECT  * FROM Materiales?
+Aparece todo el contenido de la tabla materiales	
+
+
