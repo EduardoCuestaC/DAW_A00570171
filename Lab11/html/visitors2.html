@@ -1,0 +1,59 @@
+<!--controls-->
+<div class="row">
+    <div class="col-sm-6">
+        <div class="form-group">
+            <div class="col-md-12">
+                <a class="btn btn-secondary py-0" href="#"><i class="material-icons align-middle">arrow_back</i></a>
+            </div>
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="form-group">
+            <div class="col-md-12">
+            </div>
+        </div>
+    </div>
+</div>
+<!--end of controls-->
+</form>
+</div>
+<br>
+<br>
+<div class="container">
+    <h4>Preguntas del laboratorio:</h4>
+    <p>
+        Mantener separado el código el controlador de la vista facilita la estructuración de los programas, permite un mayor nivel de reutilización de código
+        e independentiza el proceso de desarrollo de ambas partes.
+    </p>
+    <p>
+        $_SERVER contiene información sobre cabeceras, rutas y ubicaciones de scripts proporcionada por el servidor, $_SESSION lleva las variables de sesión
+        que están disponibles para el script que se está ejecutando. $_FILES contiene elementos subidos al script con el método POST. $_ENV es un array con información
+        sobre el ambiente en que se ejecuta el script.
+    </p>
+    <p>
+        count() cuenta los elementos de cualquier array (o diccionario) de php. checkdate() revisa si una fecha en formato mdy es válida.
+    </p>
+    <p>
+        Un ataque de XSS (cross-site scripting) involucra la introducción de un script malicioso por parte de un usuario que afecta al sitio al momento de
+        mostrarse. Cualquier entrada de datos efectuada por un usuario debe ser validada antes del guardado y convertida a entidades html antes de mostrarla en
+        la página.  Si los datos contienen un script y este no se convierte, las funciones como "echo" que suelen utilizarse para mostrar html al cliente
+        lo interpretarán como un programa incrustado en el documento y afectarán el sitio. Estos ataques pueden prevenirse convirtiendo los caracteres de
+        las etiquetas en entidades html a través de las funciones htmlentities() (que busca y convierte en entidades todos los caracteres que pudiesen causar
+        problemas al sitio) y htmlspecialchars() (que solo convierte los caracteres más problemáticos).
+    </p>
+
+    <h4>Fuentes:</h4>
+    <ul>
+        <li><a href="https://medium.com/@socraticsol/why-mvc-architecture-e833e28e0c76">Why MVC architecture?. Medium.</a></li>
+        <li><a href="http://php.net/manual/es/language.variables.superglobals.php">Superglobals. PHP Manual.</a></li>
+        <li><a href="http://php.net/manual/en/reserved.variables.server.php">$_SERVER. PHP Manual.</a></li>
+        <li><a href="http://php.net/manual/en/reserved.variables.session.php">$_SESSION. PHP  Manual.</a></li>
+        <li><a href="http://php.net/manual/en/reserved.variables.files.php">$_FILES. PHP  Manual.</a></li>
+        <li><a href="http://php.net/manual/en/reserved.variables.env.php">$_ENV. PHP  Manual.</a></li>
+        <li><a href="https://medium.com/@jpmorris/how-to-prevent-xss-attacks-by-escaping-output-in-php-942204bf184">How to prevent XSS attacks by
+        escaping output in php. Medium.</a></li>
+    </ul>
+
+</div>
+<br>
+<br>

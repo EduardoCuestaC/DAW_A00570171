@@ -1,0 +1,19 @@
+1-
+Revisa el contenido de la tabla materiales y determina 
+si existe alguna inconsistencia en el contenido de la tabla. 
+¿Cuál es? ¿A qué se debe? 
+
+El id de la nueva columna es igual al de la primera, no debería haber dos
+instancias de la entidad con el mismo id. Esto ocurre porque la clave de los
+materiales no está declarada como campo llave.
+
+2- 
+¿Qué ocurrió? 
+No fue posible insertar el valor porque la llave estaba duplicada
+
+3- 
+¿Qué información muestra sp_helpconstraint? 
+El tipo de restricción, la columna con la que está asociada y
+datos sobre su estado
+
+4- 
