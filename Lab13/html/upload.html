@@ -1,0 +1,27 @@
+<br>
+<br>
+<form method="post" action="upload.php" enctype="multipart/form-data">
+    <div class="row">
+        <div class="form-group col-lg-6 ml-auto mr-auto">
+            <label for="image_name">Título de la foto:</label>
+            <input name="image_name" id="image_name" class="form-control" type="text" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 ml-auto mr-auto">
+            <label for="image">Archivo:</label>
+            <input name="image" id="image" class="form-control" type="file" required>
+        </div>
+    </div>
+    <div class="row">
+        <div class="form-group col-lg-6 ml-auto mr-auto text-center self-center">
+            <button class="btn btn-secondary" type="submit" name="submit"> Añadir al álbum </button>
+        </div>
+    </div>
+</form>
+<hr>
+<br>
+<br>
+<div class="text-center">
+    <a class="ml-auto mr-auto btn btn-secondary" href="album.php">Volver al álbum</a>
+</div>

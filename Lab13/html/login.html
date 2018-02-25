@@ -1,0 +1,50 @@
+<br><br>
+<div class="container shadow" id="login_container">
+    <br>
+    <h2 class="text-center">Inicia sesión</h2>
+    <br>
+    <form method="post" action="index.php">
+        <div class="row">
+            <div class="form-group col-lg-6 ml-auto mr-auto">
+                <label for="username">Nombre de usuario:</label>
+                <input name="username" id="username" class="form-control" type="text" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 ml-auto mr-auto">
+                <label for="password">Contraseña:</label>
+                <input name="password" id="password" class="form-control" type="password" required>
+            </div>
+        </div>
+        <div class="row">
+            <div class="form-group col-lg-6 ml-auto mr-auto text-center self-center">
+                <button class="btn btn-secondary" type="submit"> Entrar </button>
+            </div>
+        </div>
+    </form>
+    <br>
+    <br>
+</div>
+<br>
+<br>
+<div class="mx-2">
+    <h4>Preguntas del laboratorio:</h4>
+    <p>Session_unset() solo borra las variables de sesión, pero deja la sesión activa. Session_destroy Session_destroy() borra toda la sesión y
+    requiere de otro session_start() para que las saesiones puedan volver a utilizarse. Usualmente se utilizan ambos para asegurar el borrado
+    de una sesión.</p>
+    <p>Un cookie guarda permanentemente información en el navegador del cliente, permaneciendo en él aún cuando la sesión en el sitio ha terminado. Las
+    variables de sesión solo existen mientras el usuario tiene una sesión vigente en el sitio y son reiniciadas cuando se inicia una sesión nueva.</p>
+    <p>Los archivos suelen guardadrse con un id o timestamp para evitar repeticiones.</p>
+    <p>Un ataque CSRF involucra el envío de un formulario desde un script a través del cambio de una URL (si se envía por GET)
+        o haciendo que el usuario mismo envíe un formulario con método POST (visitando un sitio externo, por ejemplo). Esto puede
+    alterar la información de una cuenta o hacer cambios en el sitio sin la autorización del usuario. Suele prevenirse utilizando cookies (que solo
+    pueden ser accedidas en por el sitio que las hostea) para guardar un identificador en el navegador del usuario que luego se compara con
+    información en el servidor con cada envío de formulario. Una forma enviada desde un sitio externo tendría que incluir el identificador del
+    cookie (al que no puede acceder) para ser aprobada.</p>
+    <h4>Fuentes:</h4>
+    <ul>
+        <li><a href="https://medium.com/@GemmaLou/csrf-the-a-z-2b85d26438b">CSRF, the A-Z. Gemma Lou. Medium.</a></li>
+        <li><a href="https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies">HTTP Cookies. Mozilla MDN.</a></li>
+        <li><a href="http://php.net/manual/en/function.session-destroy.php">Session_destroy. PHP manual.</a></li>
+    </ul>
+</div>
