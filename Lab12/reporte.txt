@@ -1,3 +1,4 @@
+Ejercicio 1:
 1-
 Revisa el contenido de la tabla materiales y determina 
 si existe alguna inconsistencia en el contenido de la tabla. 
@@ -7,13 +8,85 @@ El id de la nueva columna es igual al de la primera, no debería haber dos
 instancias de la entidad con el mismo id. Esto ocurre porque la clave de los
 materiales no está declarada como campo llave.
 
-2- 
+Ejercicio 2:
+1-
 ¿Qué ocurrió? 
 No fue posible insertar el valor porque la llave estaba duplicada
 
-3- 
+2- 
 ¿Qué información muestra sp_helpconstraint? 
 El tipo de restricción, la columna con la que está asociada y
 datos sobre su estado
 
+3- 
+Para la definición de las llaves primarias de las tres tablas usé:
+alter table Material 
+add constraint llaveMaterial primary key (clave)
+
+alter table Proyecto
+add constraint llaveProyecto primary key (clave)
+
+alter table Proveedor
+add constraint llaveProveedor primary key (clave)
+
 4- 
+Sentencia para definir las llaves primarias de entregan:
+alter table Entregan
+add constraint llaveEntregan primary key (fecha, clave, numero, rfc)
+
+Ejercicio 3:
+
+1-
+¿Qué particularidad observas en los valores para clave, rfc y numero? 
+Los tres valores son válidos (aunque rfc no tiene exactamente 13 caracteres)
+y únicos.
+
+2-
+¿Cómo responde el sistema a la inserción de este registro? 
+El sistema permite que el registro se inserte en la tabla.
+
+3-
+¿Qué significa el mensaje que emite el sistema? 
+
+
+4-
+La sentencia:	
+alter table Entregan
+add constraint fkentreganmateriales
+foreign key (clave) references Material (clave)
+especifica que las entradas de clave en Entregan tienen que existir en materiales,
+puesto a que establece clave como llave foránea.
+
+5-
+¿Qué significan las columnas desplegadas por sp_helpconstraint Entregan?
+Muestra todas las restricciones de la tabla entregan, con sus nombres, referencias
+y atributos relacionados.
+
+Ejercicio 4:
+1-
+¿Qué uso se le está dando a GETDATE()? 
+GETDATE() devuelve el timestamp del servidor en formato datetime.
+
+2-
+¿Tiene sentido el valor del campo de cantidad? 
+No, pues no puede hacerse una entrega de materiales sin materiales.
+
+3-
+¿Cómo responde el sistema a la insersión de una fila con cantidad=0?
+Impide la inserción, manda un mensaje de error.
+
+4-
+¿Qué significa el mensaje?
+Notifica que se violó una restricción y que no se pudo insertar el valor.
+
+
+
+
+La integridad referencial se encarga de aplicar las relaciones entre tablas al
+momento de añadir y eliminar información. Se basa en la relación entre claves
+externas y princpales usando restricciones FOREIGN KEY y CHECK. Asegura que los
+valores sean coherentes en todas las tablas. 
+
+Fuentes:
+Integridad de los datos. TechNet. Microsoft.
+https://technet.microsoft.com/es-es/library/ms184276(v=sql.105).aspx

@@ -62,3 +62,31 @@ with(
 	fieldterminator = ',',
 	rowterminator = '\n'
 )
+
+--alter table Material drop constraint llaveMaterial
+
+alter table Material 
+add constraint llaveMaterial primary key (clave)
+
+alter table Proyecto
+add constraint llaveProyecto primary key (numero)
+
+alter table Proveedor
+add constraint llaveProveedor primary key (rfc)
+
+alter table Entregan
+add constraint llaveEntregan primary key (fecha, clave, numero, rfc)
+
+alter table Entregan
+add constraint fkentreganmaterial
+foreign key (clave) references Material (clave)
+
+alter table Entregan
+add constraint fkentreganproyecto
+foreign key (numero) references Proyecto (numero)
+
+alter table Entregan
+add constraint fkentreganproveedor
+foreign key (rfc) references Proveedor (rfc)
+
+alter table entregan add constraint cantidad check (cantidad>0)
