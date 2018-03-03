@@ -1,0 +1,282 @@
+1- Si algún material no ha se ha entregado 
+¿Aparecería en el resultado de esta consulta?
+No, pues los materiales que no se han entregado no están en entregan y se
+requiere que haya una coincidencia en la clave de ambas tablas para que una
+fila salga en la consulta
+
+2- ¿Cuál sería una consulta que obtuviera el mismo resultado sin 
+usar el operador Unión?
+select * from entregan
+where clave=1300 or clave=1030
+
+3- ¿Cómo está definido el número de tuplas de este resultado en términos del
+ número de tuplas de entregan y de materiales?
+El número de filas del resultado es igual a la multiplicación de los números
+de filas de ambas tablas
+
+4- Plantea ahora una consulta para obtener las
+descripciones de los materiales entregados en el año 2000. 
+
+set dateformat dmy
+select descripcion 
+from material m, entregan e
+where m.clave = e.clave and e.fecha 
+between '01/01/00' and '31/12/00'
+
+5- ¿Por qué aparecen varias veces algunas descripciones de material? 
+porque hubo materiales que se entregaron varias veces en ese año y,
+por lo tanto, ocupan varios registros en la tabla.
+
+6- ¿Qué resultado obtienes en esta ocasión? 
+solo aparece una vez cada descripción y el resultado 
+se ordena alfabéticamente
+
+7- Obtén los números y denominaciones de los proyectos 
+con las fechas y cantidades de sus entregas,
+ ordenadas por número de proyecto, presentando las fechas de
+ la más reciente a la más antigua. 
+
+select p.numero, denominacion, fecha, cantidad
+from proyecto p, entregan e
+order by p.numero asc, fecha asc
+
+
+8- SELECT * FROM Material where Descripcion LIKE 'Si%' 
+¿Qué resultado obtienes? 
+Todos los registros de materiales que empiezan con si, no es case sensitive
+
+9- Explica que hace el símbolo '%' 
+representa a cualquier cadena de caracteres
+
+10- ¿Qué sucede si la consulta fuera : LIKE 'Si' ? 
+buscaría aquellos que tuviesen un si pegado al inicio y final de la cadena
+
+11- ¿Qué resultado obtienes? 
+No aparece ninguna columna
+
+12- Explica a qué se debe este comportamiento. 
+no hay ningún material cuya descripción sea solo 'si'
+
+DECLARE @foo varchar(40); 
+DECLARE @bar varchar(40); 
+SET @foo = '¿Que resultado'; 
+SET @bar = ' ¿¿¿??? ' 
+SET @foo += ' obtienes?'; 
+PRINT @foo + @bar; 
+13- ¿Qué resultado obtienes de ejecutar el siguiente código? 
+se imprime ¿Que resultado obtienes? ¿¿¿???
+
+14- ¿Para qué sirve DECLARE? 
+para declarar una variable (deben llevar arroba) con su tipo de dato
+
+15- ¿Cuál es la función de @foo? 
+almacena el valor '¿Que resultado'
+
+16- ¿Que realiza el operador SET? 
+asigna un valor a una variable
+
+17- SELECT RFC FROM Entregan WHERE RFC LIKE '[A-D]%'; 
+regresa todos los rfcs que empiezan con alguna letra entre a y d
+
+18- SELECT RFC FROM Entregan WHERE RFC LIKE '[^A]%'; 
+regresa todos los rfcs que empiezan con alguna letra distinta de a
+
+19- SELECT Numero FROM Entregan WHERE Numero LIKE '___6'; 
+regresa todos los números de proyecto que terminan con seis
+
+20- ¿Cómo filtrarías rangos de fechas? 
+con ...fecha between '01/01/00' and '31/12/00'
+
+21- SELECT RFC,Cantidad, Fecha,Numero 
+FROM [Entregan] 
+WHERE [Numero] Between 5000 and 5010 AND 
+Exists ( SELECT [RFC] 
+FROM [Proveedores] 
+WHERE RazonSocial LIKE 'La%' and [Entregan].[RFC] = [Proveedores].[RFC] ) 
+
+muestra el rfc, cantidad, fecha y número de una entrega de las entregas con 
+número de proyecto entre 5000 y 5010 y hechas por proveedores con razón social
+que inicia con La y han entregado productos.
+
+22-
+El paréntesis hace que la subconsulta se ejecute primero y completa antes
+de evaluar lo demás.
+
+23-Tomando de base la consulta anterior del EXISTS, 
+realiza el query que devuelva el mismo resultado, pero usando el operador IN 
+
+SELECT RFC,Cantidad, Fecha,Numero 
+FROM Entregan 
+WHERE Numero Between 5000 and 5010 AND 
+rfc in ( SELECT RFC 
+FROM Proveedor
+WHERE RazonSocial LIKE 'La%' and Entregan.RFC = Proveedor.RFC)
+
+24- Tomando de base la consulta anterior del EXISTS, realiza el query que
+devuelva el mismo resultado, pero usando el operador NOT IN
+
+SELECT RFC,Cantidad, Fecha,Numero 
+FROM Entregan 
+WHERE Numero Between 5000 and 5010 AND 
+rfc not in ( SELECT RFC 
+FROM Proveedor
+WHERE RazonSocial not LIKE 'La%' and Entregan.RFC = Proveedor.RFC)
+
+25- Realiza un ejemplo donde apliques algún operador : ALL, SOME o ANY 
+select cantidad 
+from entregan
+where clave = all (
+select clave
+from entregan
+where clave = 1000 or clave = 1010)
+
+no regresa ninguna cantidad pues no hay ninguna clave que esté en toda
+la tabla de la subconsulta (dado que muestra dos)
+
+26- 
+¿Qué hace la siguiente sentencia? Explica porque 
+
+SELECT TOP 2 * FROM Proyectos 
+
+selecciona las dos filas de proyectos con el número más pequeño, pues
+están ordenadas ascendentemente en la tabla.
+
+27-
+¿Qué sucede con la siguiente consulta? Explica porque 
+
+SELECT TOP Numero FROM Proyectos 
+
+Muestra un error de sintaxis incorrecta, pues el argummento a la derecha de top
+no es un número, sino una columna de una tabla
+
+28-¿Qué consulta usarías para obtener el importe de las entregas es decir, 
+el total en dinero de lo entregado, basado en la cantidad de la entrega 
+y el precio del material y el impuesto asignado? 
+
+select descripcion as 'material', sum(e.cantidad)*costo*(1+porcentajeImpuesto/100) as 'total'
+from entregan e, material m
+where e.clave = m.clave
+group by costo, porcentajeImpuesto, descripcion
+
+
+================================== CONSULTAS ====================================
+
+1- Los materiales (clave y descripción) entregados al
+ proyecto "México sin ti no estamos completos". 
+
+CONSULTA:
+select m.clave, descripcion
+from material m, proyecto p, entregan e
+where m.clave = e.clave and e.numero = p.numero 
+and p.denominacion = 'Mexico sin ti no estamos completos'
+
+RESULTADO:
+3 renglones
+
+clave	descripcion
+1030	Varilla 4/33
+1430	Pintura B1022
+1230	Cemento 
+
+
+2- Los materiales (clave y descripción) que han sido proporcionados por el
+ proveedor "Acme tools". 
+
+CONSULTA:
+select m.clave, descripcion
+from material m, entregan e, proveedor pr
+where m.clave = e.clave and pr.rfc = e.rfc
+and pr.razonSocial = 'Acme tools'
+
+RESULTADO:
+0 renglones
+
+no existe el proveedor acme tools
+
+
+3- El RFC de los proveedores que durante el 2000 entregaron en promedio 
+cuando menos 300 materiales. 
+
+CONSULTA:
+select rfc
+from entregan
+where fecha between '01/01/00' and '31/12/00'
+group by rfc
+having avg(cantidad)>=300
+
+RESULTADO: 
+7 renglones
+
+rfc
+DDDD800101   
+CCCC800101   
+BBBB800101   
+
+
+4- El Total entregado por cada material en el año 2000. 
+
+CONSULTA:
+select descripcion, sum(cantidad) as 'total entregas'
+from entregan e, material m
+where e.clave = m.clave and fecha between '01/01/00' and '31/12/00'
+group by descripcion
+
+RESULTADO: 
+22 renglones
+
+descripcion     total entregas
+Arena		366.00
+Block		466.00
+Cantera rosa	162.00
+
+
+5- La Clave del material más vendido durante el 2001. (se recomienda usar una 
+vista intermedia para su solución) 
+
+CONSULTA: 
+select top 1 clave
+from entregan 
+where fecha between '01/01/01' and '31/12/01'
+group by clave
+order by sum(cantidad) desc
+
+RESULTADO:
+1 renglón
+
+clave
+1020
+
+
+6- Productos que contienen el patrón 'ub' en su nombre. 
+
+CONSULTA:
+select descripcion
+from material
+where descripcion like '%ub%'
+
+RESULTADO:
+12 renglones
+
+descripcion
+Recubrimiento P1010
+Recubrimiento P1001
+Recubrimiento P1019
+
+7- Denominación y suma del total a pagar para todos los proyectos. 
+
+CONSULTA:
+select denominacion, sum(costo*cantidad*(1+porcentajeImpuesto/100)) as 'total a pagar'
+from material m, entregan e, proyecto p
+where e.clave = m.clave and e.numero = p.numero
+group by denominacion
+
+RESULTADO:
+20 renglones
+
+denominacion					total a pagar
+Ampliación de la carretera a la huasteca	742461.1940000000
+Aztecón						150200.2190000000
+CIT Campeche					161603.0820000000
+
+
+
