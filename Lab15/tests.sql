@@ -2,6 +2,9 @@
 union
 (select * from entregan where clave=1300)
 
+select *
+from entregan where clave != 1000
+
 select * from entregan
 where clave=1300 or clave=1030
 
@@ -176,15 +179,62 @@ from material m, entregan e, proyecto p
 where e.clave = m.clave and e.numero = p.numero
 group by denominacion
 
+drop view b
+drop view a
 
 create view a as
-select rfc
+select rfc as rfca
 from proyecto p, entregan e
-where denominacion = 'Educando en coahuila'
+where denominacion != 'Educando en coahuila'
 and e.numero = p.numero
 
 create view b as
-select e.rfc
-from proyecto p, entregan e, a
+select rfc as rfcb
+from proyecto p, entregan e
 where denominacion = 'Televisa en acción'
-and e.numero = p.numero and e.rfc != any (a.rfc)
+and e.numero = p.numero
+
+select distinct p.rfc, razonSocInvestigación 2ial
+from a, b, proveedor p
+where rfca = rfcb
+and rfca = p.rfc
+
+
+select distinct denominacion, p.rfc, razonSocial
+from proveedor p, entregan e, proyecto py
+where denominacion = 'Televisa en acción'
+and py.numero = e.numero 
+and e.rfc not in (select rfc
+from entregan e, proyecto py
+where denominacion = 'Educando en coahuila'
+and py.numero = e.numero)
+and e.rfc = p.rfc
+
+
+select costo, descripcion
+from material m, entregan e, proyecto py
+where denominacion = 'Televisa en accion'
+and py.numero = e.numero
+and e.rfc not in (select rfc
+from entregan e, proyecto py
+where denominacion != 'Educando en coahuila'
+and py.numero = e.numero)
+and e.clave = m.clave
+
+drop view s
+
+create view s as
+select count(cantidad) as countc, sum(cantidad) as sumc, e.clave as clave
+from material m, entregan e
+where e.clave = m.clave
+group by e.clave
+
+select descripcion, countc, sumc*costo*(1+porcentajeImpuesto/100) as 'total'
+from s, material 
+where s.clave = material.clave
+order by descripcion asc
+
+select descripcion, count(cantidad) as 'cantidad de entregas', sum(cantidad*costo*(1+porcentajeImpuesto/100)) 'costo total'
+from material m, entregan e
+where m.clave = e.clave
+group by descripcion

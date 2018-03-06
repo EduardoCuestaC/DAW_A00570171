@@ -278,5 +278,97 @@ Ampliación de la carretera a la huasteca	742461.1940000000
 Aztecón						150200.2190000000
 CIT Campeche					161603.0820000000
 
+8-
+Denominación, RFC y RazonSocial de los proveedores
+ que se suministran materiales al proyecto Televisa en 
+acción que no se encuentran apoyando al proyecto 
+Educando en Coahuila. (Solo usando vistas) 
+
+CONSULTA: 
+create view a as
+select rfc as rfca
+from proyecto p, entregan e
+where denominacion != 'Educando en coahuila'
+and e.numero = p.numero
+
+create view b as
+select rfc as rfcb
+from proyecto p, entregan e
+where denominacion = 'Televisa en acción'
+and e.numero = p.numero
+
+select distinct p.rfc, razonSocial
+from a, b, proveedor p
+where rfca = rfcb
+and rfca = p.rfc
+
+RESULTADO: 
+4 renglones
+
+rfc           razonSocial
+AAAA800101    La fragua
+CCCC800101    La Ferre
+DDDD800101    Cecoferre
+EEEE800101    Alvin
 
 
+
+
+9- Denominación, RFC y RazonSocial de los proveedores
+que se suministran materiales al proyecto Televisa
+en acción que no se encuentran apoyando al proyecto
+Educando en Coahuila. (Sin usar vistas, utiliza not in, in o exists) 
+
+CONSULTA:
+select distinct denominacion, p.rfc, razonSocial
+from proveedor p, entregan e, proyecto py
+where denominacion = 'Televisa en acción'
+and py.numero = e.numero 
+and e.rfc not in (select rfc
+from entregan e, proyecto py
+where denominacion = 'Educando en coahuila'
+and py.numero = e.numero)
+and e.rfc = p.rfc
+
+RESULTADO:
+2 renglones
+
+denominacion		rfc		razonSocial
+Televisa en acción	CCCC800101   	La Ferre
+Televisa en acción	DDDD800101   	Cecoferre
+
+10- Costo de los materiales y los Materiales que son entregados
+al proyecto Televisa en acción cuyos proveedores también
+suministran materiales al proyecto Educando en Coahuila. 
+
+CONSULTA:
+select costo, descripcion
+from material m, entregan e, proyecto py
+where denominacion = 'Televisa en accion'
+and py.numero = e.numero
+and e.rfc not in (select rfc
+from entregan e, proyecto py
+where denominacion != 'Educando en coahuila'
+and py.numero = e.numero)
+and e.clave = m.clave
+
+RESULTADO:
+0 renglones
+costo	descripcion
+
+11- Nombre del material, cantidad de veces entregados
+y total del costo de dichas entregas por material de todos los proyectos. 
+
+CONSULTA:
+select descripcion, count(cantidad) as 'cantidad de entregas', sum(cantidad*costo*(1+porcentajeImpuesto/100)) 'costo total'
+from material m, entregan e
+where m.clave = e.clave
+group by descripcion
+
+RESULTADO:
+42 renglones
+
+descripcion		cantidad de entregas	costo total
+Arena			3			218692.3200000000
+Block			3			51754.0800000000
+Cantera amarilla	3			176536.5000000000

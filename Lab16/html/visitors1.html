@@ -1,0 +1,132 @@
+<br /><br />
+<div class="container shadow">
+
+    <!--header-->
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="text-center">
+                <br>
+                <br>
+                <br>
+                <div class="display-4">Usuarios</div>
+                <br>
+                <span class="warning">Para registrar una entrada todos los campos deben estar llenos</span>
+            </div>
+        </div>
+    </div>
+    <!--end of header-->
+    <form id="visitante_form" action="../controller/visitors.php" method="post">
+        <!--id-->
+        <div class="row">
+            <div class="col-sm-12">
+                <div class='form-group'>
+                    <label for="visitante_idVisitante">Número de Usuario</label>
+                    <div class="col-md-10">
+                        <input name="visitante[idVisitante]"  class="form-control" id="visitante_idVisitante" size="30" type="text" placeholder="1234567"/>
+                    </div>
+                </div>
+                <span class="warning">Este campo solo puede contener un número con cualquier cantidad de dígitos<br><br><br></span>
+            </div>
+        </div>
+        <!--end of id-->
+
+        <!--name, paternal, maternal-->
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_nombre">Nombre(s):</label>
+                    <div class="col-md-12">
+                        <input name="visitante[nombre]" class="form-control req" id="visitante_nombre" size="30" type="text" placeholder="Jorge Eduardo"/>
+                    </div>
+                </div>
+                <span class="warning">Este campo no puede contener números ni caracteres especiales<br><br><br></span>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_apellidoPaterno">Apellido paterno:</label>
+                    <div class="col-md-12">
+                        <input name="visitante[apellidoPaterno]" class="form-control req" id="visitante_apellidoPaterno" size="30" type="text" placeholder="Gómez"/>
+                    </div>
+                </div>
+                <span class="warning">Este campo no puede contener números ni caracteres especiales<br><br><br></span>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_apellidoMaterno">Apellido materno:</label>
+                    <div class="col-md-12">
+                        <input name="visitante[apellidoMaterno]" class="form-control req" id="visitante_apellidoMaterno" size="30" type="text" placeholder="Ramírez"/>
+                    </div>
+                </div>
+                <span class="warning">Este campo no puede contener números ni caracteres especiales<br><br><br></span>
+            </div>
+        </div>
+        <!--end of name, paternal, maternal-->
+
+        <!--of birth, schooling, genre-->
+        <div class='row'>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_fechaNacimiento">Fecha de nacimiento:</label>
+                    <div class="col-md-12">
+                        <input name="visitante[fechaNacimiento]" class="form-control req" id="visitante_fechaNacimiento" size="30" type="date"/>
+                    </div>
+                </div>
+                <span class="warning">Debes seleccionar una fecha de nacimiento<br><br><br></span>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_gradoEstudios">Grado de estudio:</label>
+                    <select name="visitante[gradoEstudios]" class="form-control req" id="visitante_gradoEstudios">
+                        <option value="" disabled selected>...</option>
+                        <option value="1">Ninguno</option>
+                        <option value="2">Preescolar</option>
+                        <option value="3">Primaria</option>
+                        <option value="4">Secundaria</option>
+                        <option value="5">Preparatoria</option>
+                        <option value="6">Universidad</option>
+                        <option value="7">Maestría</option>
+                        <option value="8">Doctorado</option>
+                        <option value="9">Postdoctorado</option>
+                    </select>
+                </div>
+                <span class="warning">Debes seleccionar un grado de estudios<br><br><br></span>
+            </div>
+            <div class='col-sm-4'>
+                <div class='form-group'>
+                    <label for="visitante_genero">Género:</label>
+                    <select name="visitante[genero]" class="form-control req" id="visitante_genero">
+                        <option value="" disabled selected>...</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                        <option value="O">Otro</option>
+
+                    </select>
+                </div>
+                <span class="warning">Debes seleccionar un género<br><br><br></span>
+            </div>
+        </div>
+        <!--end of birth, schooling, genre-->
+        <!--search button-->
+        <div class="row">
+            <div class="col-sm-2">
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <a id="registrarEntrada"><button type="submit" class="btn btn-secondary btn-block" name="actionTypeEntry" value="entry"> Registrar Entrada</button></a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-3">
+            </div>
+            <div class="col-sm-3">
+                <div class="form-group">
+                    <div class="col-lg-12">
+                        <a id="buscarVisitante"><button type="submit" class="btn btn-secondary btn-block" name="actionTypeEntry" value="search"> Buscar Visitante</button></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--search button-->
+        <!-- include the code that generates the table-->
+        <!--include visitors2-->
