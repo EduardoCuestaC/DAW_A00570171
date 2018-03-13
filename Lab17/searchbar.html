@@ -1,0 +1,72 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+<br><br>
+<div class="container shadow">
+    <div class="row">
+        <br>
+        <div class="col-sm-12">
+            <ul id="lastSearches"></ul>
+        </div>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form>
+                <div class="form-group">
+                    <br>
+                    <label for="searchbar">Búsqueda:</label>
+                    <input class="form-control" autocomplete = "off" id="searchbar" type="text" name="s">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="suggestionPanel">
+                <ul class="suggestionList" id="suggestions"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-primary mb-3" id="searchButton" name="searched" value="search">Buscar</button>
+        </div>
+    </div>
+    <br>
+</div>
+
+<div>
+    <p>
+        AJAX permite la creación de páginas web con un mayor nivel de interactividad
+        y mejora mucho la experiencia de usuario en la utilización de contenido dinámicamente
+        generado desde el servidor.
+    </p>
+    <p>
+        Con AJAX es posible utilizar el misimo código para validar tanto en el cliente como
+        en el servidor. Las páginas que utilizan AJAX tienen las mismas vulnerabilidades
+        que las páginas que no lo usan.
+    </p>
+    <p>
+        JSON (Javascript Object Notation) es una sintaxis para el envío de información
+        entre un cliente y un servidor que puede traducirse fácilmente a objetos
+        de Javascript o a otros tipos de arreglos.
+    </p>
+    <h4>
+        Fuentes:
+    </h4>
+    <ul>
+        <li>
+            <a href="https://www.w3schools.com/js/js_json_intro.asp">JSON - Introduction. W3Schools.</a>
+        </li>
+    </ul>
+</div>
+
+<script src="script.js"></script>

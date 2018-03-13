@@ -1,0 +1,256 @@
+1-
+La suma de las cantidades e importe
+total de todas las entregas realizadas durante el 97. 
+
+CONSULTA:
+set dateformat dmy
+select sum(cantidad) as 'número de entregas', 
+sum(cantidad*costo*(1+porcentajeImpuesto/100)) as 'importe total de entregas'
+from entregan e, material m
+where e.fecha between '01-01-97' and '31-12-97'
+and e.clave = m.clave
+group by e.clave
+
+RESULTADO:
+1 renglón
+
+número de entregas	importe total de entregas
+546.00			44789.4720000000
+
+2-
+Para cada proveedor, obtener la razón social del proveedor, 
+número de entregas e importe total de las entregas realizadas.
+
+CONSULTA:
+select razonSocial as 'razón social', 
+count(e.rfc) as 'número de entregas',
+sum(cantidad*costo*(1+porcentajeImpuesto/100)) as 'importe de entregas'
+from proveedor p, entregan e, material m
+where p.rfc = e.rfc and m.clave = e.clave
+group by razonSocial
+
+RESULTADO:
+8 renglones
+
+razón social		número de entregas	importe de entregas
+Alvin			15			794295.2064000000
+Cecoferre		18			860441.9770000000
+Comex			15			801930.5980000000
+La Ferre		18			919531.4300000000
+La fragua		18			2301675.6920000000
+Oviedo			18			1059888.7370000000
+Tabiquera del centro	15			1937798.7240000000
+Tubasa			15			2278398.9930000000
+
+
+3-
+Por cada material obtener la clave y descripción del material,
+la cantidad total entregada, la mínima cantidad entregada, 
+la máxima cantidad entregada, el importe total de las entregas de aquellos 
+materiales en los que la cantidad promedio entregada sea mayor a 400.
+
+CONSULTA:
+select e.clave, descripcion,
+count(e.clave) as 'número de entregas',
+min(cantidad) as 'cantidad mínima entregada',
+max(cantidad) as 'cantidad máxima entregada'
+from material m, entregan e
+where m.clave = e.clave
+group by e.clave, descripcion
+having avg(cantidad) > 400
+
+RESUTLADO:
+15 renglones
+
+clave	descripcion	número de entregas	cantidad mínima entregada	cantidad máxima entrgada
+1050	Varilla 4/34	3			90.00				623.00
+1080	Ladrillos rojos	3			86.00				699.00
+1100	Block		3			466.00				699.00
+
+
+
+4- 
+Para cada proveedor, indicar su razón social y mostrar la cantidad
+promedio de cada material entregado, detallando la clave y descripción
+del material, excluyendo aquellos proveedores para los que la cantidad
+promedio sea menor a 500. 
+
+CONSULTA:
+select a.srfc as 'rfc', razonSocial as 'razón social',
+ a.sclave as 'clave', descripcion as 'descripción'
+from proveedor p, material m,
+(select e.rfc as 'srfc', 
+avg(cantidad) as 'savg',
+e.clave as 'sclave'
+from material m, entregan e, proveedor p
+group by e.rfc, e.clave
+having avg(cantidad) < 500) as a
+where p.rfc = a.srfc
+and a.sclave = m.clave
+order by p.rfc asc
+
+RESULTADO:
+41 renglones
+
+rfc		razón social	clave	descripción	promedio de entregas
+AAAA800101   	La fragua	1000	Varilla 3/16	142.000000
+AAAA800101   	La fragua	1160	Cantera rosa	357.000000
+AAAA800101   	La fragua	1080	Ladrillos rojos	404.666666
+
+
+5-
+Mostrar en una solo consulta los mismos datos que en la consulta 
+anterior pero para dos grupos de proveedores: aquellos para los 
+que la cantidad promedio entregada es menor a 370 y aquellos para 
+los que la cantidad promedio entregada sea mayor a 450.
+
+CONSULTA:
+(select a.srfc as 'rfc', razonSocial as 'razón social',
+ a.sclave as 'clave', descripcion as 'descripción'
+from proveedor p, material m,
+(select e.rfc as 'srfc', 
+avg(cantidad) as 'savg',	
+e.clave as 'sclave'
+from material m, entregan e, proveedor p
+group by e.rfc, e.clave
+having avg(cantidad) < 370) as a
+where p.rfc = a.srfc
+and a.sclave = m.clave
+)
+union
+(select a.srfc as 'rfc', razonSocial as 'razón social',
+ a.sclave as 'clave', descripcion as 'descripción'
+from proveedor p, material m,
+(select e.rfc as 'srfc', 
+avg(cantidad) as 'savg',
+e.clave as 'sclave'
+from material m, entregan e, proveedor p
+group by e.rfc, e.clave
+having avg(cantidad) > 450) as a
+where p.rfc = a.srfc
+and a.sclave = m.clave
+)
+
+RESULTADO:
+34 renglones
+
+rfc		razón social	clave	descripción	
+AAAA800101   	La fragua	1000	Varilla 3/16
+AAAA800101   	La fragua	1160	Cantera rosa
+AAAA800101   	La fragua	1240	Arena
+
+
+6-
+Clave y descripción de los materiales que nunca han sido entregados
+
+CONSULTA:
+select clave, descripcion
+from material
+where clave not in (select clave from entregan)
+
+RESULTADO:
+4 renglones
+
+clave	descripcion
+1440	Pintura D 1030
+1450	Pintura D 1040
+1460	Pintura C 1013
+
+7-
+Razón social de los proveedores que han realizado entregas tanto al
+proyecto 'Vamos México' como al proyecto 'Querétaro Limpio'
+
+CONSULTA:
+select distinct razonSocial as 'razón social'
+from proveedor p, entregan e, proyecto py
+where denominacion = 'Vamos Mexico' or denominacion = 'Queretaro Limpio'
+and e.numero = py.numero
+and e.rfc = p.rfc
+
+RESULTADO:
+8 renglones
+
+razón social
+Alvin
+Cecoferre
+Comex
+
+
+8-
+Descripción de los materiales que nunca han sido 
+entregados al proyecto 'CIT Yucatán'. 
+
+CONSULTA:
+select distinct descripcion
+from material
+where clave not in (
+select e.clave
+from entregan e, proyecto py
+where denominacion = 'CIT Yucatan'
+and e.numero = py.numero
+)
+
+RSULTADO:
+42 renglones
+
+descripcion
+Arena
+Block
+Cantera amarilla
+
+
+9-
+Razón social y promedio de cantidad entregada de 
+los proveedores cuyo promedio de cantidad entregada es 
+mayor al promedio de la cantidad 
+entregada por el proveedor con el RFC 'VAGO780901'.
+
+CONSULTA:
+select razonSocial, avg(cantidad) as 'promedio de entregas'
+from proveedor p, entregan e
+where p.rfc = e.rfc
+group by razonSocial
+having avg(cantidad)>(
+select avg(cantidad)
+from entregan
+where rfc = 'VAGO780901'
+group by rfc
+)
+
+RESULTADO:
+0 renglones
+
+razon social	promedio de entregas
+
+
+10-
+RFC, razón social de los proveedores que participaron 
+en el proyecto 'Infonavit Durango' y cuyas cantidades 
+totales entregadas en el 2000 fueron mayores a las 
+cantidades totales entregadas en el 2001.
+
+CONSULTA:
+set dateformat ymd
+select distinct p.rfc, razonSocial
+from proveedor p, proyecto py, entregan e, 
+(select sum(cantidad) as 'c0', rfc
+from entregan
+where fecha between '00-01-01' and '00-12-31'
+group by rfc) cca,
+(select sum(cantidad) as 'c1', rfc
+from entregan
+where fecha between '01-01-01' and '01-12-31'
+group by rfc) ccb
+where denominacion = 'Infonavit Durango'
+and py.numero = e.numero
+and e.rfc = cca.rfc
+and e.rfc = ccb.rfc
+and cca.c0 > ccb.c1
+and e.rfc = p.rfc
+
+RESULTADO:
+2 renglones
+
+rfc		razonSocial
+BBBB800101   	Oviedo
+FFFF800101   	Comex

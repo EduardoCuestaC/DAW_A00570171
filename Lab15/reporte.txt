@@ -6,8 +6,17 @@ fila salga en la consulta
 
 2- ¿Cuál sería una consulta que obtuviera el mismo resultado sin 
 usar el operador Unión?
+CONSULTA:
 select * from entregan
 where clave=1300 or clave=1030
+
+RESULTADO:
+6 renglones
+
+clave	rfc		numero 	fecha
+1030	DDDD800101   	5003	1998-02-21 00:00:00.000	202.00
+1030	DDDD800101   	5016	1998-04-09 00:00:00.000	139.00
+1030	DDDD800101   	5016	2000-11-05 00:00:00.000	295.00
 
 3- ¿Cómo está definido el número de tuplas de este resultado en términos del
  número de tuplas de entregan y de materiales?
@@ -16,12 +25,21 @@ de filas de ambas tablas
 
 4- Plantea ahora una consulta para obtener las
 descripciones de los materiales entregados en el año 2000. 
-
+CONSULTA:
 set dateformat dmy
 select descripcion 
 from material m, entregan e
 where m.clave = e.clave and e.fecha 
 between '01/01/00' and '31/12/00'
+
+RESULTADO:
+22 renglones
+
+descripcion
+Arena
+Block
+Cantera rosa
+
 
 5- ¿Por qué aparecen varias veces algunas descripciones de material? 
 porque hubo materiales que se entregaron varias veces en ese año y,
@@ -35,10 +53,17 @@ se ordena alfabéticamente
 con las fechas y cantidades de sus entregas,
  ordenadas por número de proyecto, presentando las fechas de
  la más reciente a la más antigua. 
-
+CONSULTA:
 select p.numero, denominacion, fecha, cantidad
 from proyecto p, entregan e
 order by p.numero asc, fecha asc
+
+RESULTADO:
+2640 renglones
+
+5000	Vamos Mexico	1997-09-03 00:00:00.000	546.00
+5000	Vamos Mexico	1998-01-03 00:00:00.000	421.00
+5000	Vamos Mexico	1998-01-08 00:00:00.000	132.00
 
 
 8- SELECT * FROM Material where Descripcion LIKE 'Si%' 
