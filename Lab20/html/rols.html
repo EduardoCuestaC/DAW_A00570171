@@ -1,0 +1,41 @@
+<br /><br />
+<div class="container shadow">
+    <div class="mx-auto text-center"> <!-- mx-auto da un padding y border automatico-->
+        <div class="display-3">Roles</div> <!--display son headdings mas grandes-->
+    </div>
+    <br>
+    <br>
+    <div class="row text-center">
+        <?php while($row = mysqli_fetch_array($rols, MYSQLI_BOTH)) { ?>
+            <div class="col-sm-12 col-md-4 mb-3">
+                <div class="card-body shadow">
+                    <p class=""><b><?php echo $row["nombre"]; ?></b></p>
+                    <a class="edit" href="rolsEdit.php?idRol=<?php echo $row[0] ?>"><i class="material-icons">mode_edit</i></a>
+                    <div class="card-text">
+                        <?php echo $row["descripcion"]; ?>
+                    </div> <br>
+                    <div class='projects-button btn btn-secondary'>Ver permisos</div>
+                    <div class='projects'> <br>
+                        <!--      Obtiene los permisos asociados con el Rol      -->
+                        <?php $perms = getPermissionsForRol($row["idRol"]); ?> 
+                        <?php while($rowperm = mysqli_fetch_array($perms, MYSQLI_BOTH)) { ?>
+                        <p><?php echo $rowperm["nombre"]; ?></p>
+                        <?php } ?>
+                    </div>
+                </div>
+            </div>
+        <?php } ?>
+    </div>
+    <br />
+    <div class="row">
+        <div class="col-sm-2"></div>
+        <div class="col-sm-2 center-block">
+            <a href="accessControl.php" class="btn btn-secondary py-0"><i class="material-icons align-middle">arrow_back</i></a>
+        </div>
+        <div class="col-sm-4"></div>
+        <div class="col-sm-2">
+            <a href="rolsCreate.php"><button type="button" class="btn btn-secondary btn-block"> Agregar rol </button></a>
+        </div>
+    </div>
+    <br />
+</div>

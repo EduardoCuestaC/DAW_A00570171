@@ -103,3 +103,20 @@ document.getElementById("registrarEntrada").onclick = function(event){
     else
         document.getElementsByClassName("warning")[0].style.display = "none";
 };
+
+
+
+$("input").foreach(f(){
+
+})
+
+table{
+    div{
+        thea{
+
+        }
+        tbody{
+
+        }
+    }
+}

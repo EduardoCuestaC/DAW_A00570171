@@ -1,0 +1,95 @@
+<div class="container">
+    <br />
+    <div class="shadow">
+        <div class="row text-center">
+        <div class="col col-sm-12 col-md-6 mx-auto">
+            <div class="display-3">Reporte DGB</div>
+        </div>
+    </div>
+        <br />
+        <div class="row px-2">
+            <div class="col">
+                <form>
+                    <div class="row text-center">
+                        <div class="col-sm-12 col-md-4 offset-md-1 my-1">
+                            <select class="form-control shadow" id="month" name="Month">
+                                <option value="" disabled selected>-- Mes --</option>
+                                <option value="01">Enero</option>
+                                <option value="02">Febrero</option>
+                                <option value="03">Marzo</option>
+                                <option value="04">Abril</option>
+                                <option value="05">Mayo</option>
+                                <option value="06">Junio</option>
+                                <option value="07">Julio</option>
+                                <option value="08">Agosto</option>
+                                <option value="09">Septiembre</option>
+                                <option value="10">Octubre</option>
+                                <option value="11">Noviembre</option>
+                                <option value="12">Diciembre</option>
+                            </select>
+                        </div>
+                        <div class="col-sm-12 col-md-4 offset-md-1 my-1">
+                            <select class="form-control shadow" id="year" name="Year">
+                                <option value="" disabled selected>-- Año --</option>
+                                <?php
+                                $firstYear = 2018;
+                                for($year = $firstYear; $year <= date("Y"); $year++) {
+                                    echo "<option value='$year'> $year </option>";
+                                }
+                                ?>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center mt-3 my-2 px-2">
+            <div class="col-sm-12">
+                <b>Usuarios Atendidos</b>
+            </div>
+        </div>
+        <div class="row px-2">
+            <div class="col-sm-12 col-md-4">
+                <b>Niños:</b>
+                <p id="ninos" class="d-inline"></p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <b>Jóvenes:</b>
+                <p id="jovenes" class="d-inline"></p>
+            </div>
+            <div class="col-sm-12 col-md-4">
+                <b>Adultos:</b>
+                <p id="adultos" class="d-inline"></p>
+            </div>
+        </div>
+        <hr>
+        <div class="row text-center mt-3 my-2 px-2">
+            <div class="col-sm-12">
+                <b>Servicio de Préstamo</b>
+            </div>
+        </div>
+        <div class="row px-2">
+            <div class="col-sm-12 col-md-6">
+                <b>Credenciales expedidas:</b>
+                <p id="credenciales" class="d-inline"></p>
+            </div>
+            <div class="col-sm-12 col-md-6">
+                <b>Libros prestados a domicilio:</b>
+                <p id="libros" class="d-inline"></p>
+            </div>
+        </div>
+        <br /><br />
+        <div class="row">
+            <div class="col-sm-4 text-center">
+                <a class="btn btn-secondary py-0" href="menu.php"><i class="material-icons align-middle">arrow_back</i></a>
+            </div>
+            <div class="col-sm-4 text-right">
+                <a class="btn btn-secondary" href="#">Imprimir</a>
+            </div>
+        </div>
+        <br />
+    </div>
+</div>
+
+<script src="js/dgbQueries.js"></script>
