@@ -1,0 +1,39 @@
+1- El primer bloque destruye el stored procedure "creaMaterial", en
+caso de que exista. 
+2- El comando GO sirve para ejecutar en el servidor un batch de comandos
+anterior. Puede pasársele un número entero como argumento para que los comandos
+se ejecuten ese número de veces. Si no se escribe nada después de GO, los comandos
+se ejecutan una sola vez. Las variables locales solo existen dentro del bloque.
+3- El procedimiento recibe como parámetro los valores a insertar en la tabla
+materiales y crea en ella un nuevo renglón.
+4- El procedimiento recibe como parámetros un texto y un número y los usa para
+encontrar a los materiales con una descripción que contenga el texto y un costo
+mayor al número.
+
+
+Preguntas:
+Los procedimientos almacenados se precompilan en el servidor, por lo que utilizarlos resulta más rápido (por la agrupación de comandos
+que se ejecuta en una sola llamada, reduciendo el tráfico de red) y eficiente. También se prestan a trasladar más lógica al lado del servidor
+(que usualmente tiene mejores recursos que el cliente).
+que constuir las querys al momento de hacerlas.
+
+El código ejecutable se comparte a todos los usuarios, reduciendo mucho la cantidad de memoria del servidor utilizada
+al crear querys en programas accedidos por una gran cantidad de usuarios.
+
+Fuentes: 
+Advantages of Stored Procedures. Oracle Help Center. https://docs.oracle.com/en/database/oracle/oracle-database/12.2/jjdev/stored-procedure-advantages.html#GUID-F83A35EB-53A9-4860-8C50-6686B4DA6084.
+
+Stored procedure para el proyecto:
+
+drop procedure if exists pInsertVisitante;
+create procedure pInsertVisitante(
+				in pnombre varchar(50),
+				in papellidoPaterno varchar(50),
+				in papellidoMaterno varchar(50),
+				in pfechaNacimiento datetime,
+				in genero int
+			)
+begin
+	insert into visitante(nombre, apellidoPaterno, apellidoMaterno, fechaNacimiento, genero)
+	values (pnombre, papellidoPaterno, papellidoMaterno, pfechaNacimiento, pgenero)
+end

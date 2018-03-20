@@ -1,0 +1,47 @@
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="styles.css">
+<br><br>
+<div class="container shadow">
+    <div class="row">
+        <br>
+        <div class="col-sm-12">
+            <ul id="lastSearches"></ul>
+        </div>
+        <br>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <form>
+                <div class="form-group">
+                    <br>
+                    <label for="searchbar">Búsqueda:</label>
+                    <input class="form-control" autocomplete = "off" id="searchbar" type="text" name="s">
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12">
+            <div id="suggestionPanel">
+                <ul class="suggestionList" id="suggestions"></ul>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-12 text-center">
+            <button class="btn btn-primary mb-3" id="searchButton" name="searched" value="search">Buscar</button>
+        </div>
+    </div>
+    <br>
+</div>
+
+
+<script src="script.js"></script>
