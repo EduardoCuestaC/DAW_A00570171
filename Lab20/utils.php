@@ -314,7 +314,7 @@ function buildTableData($result){
         $fieldNumber = mysqli_num_fields($result);
         $table .= "<thead>";
         for($i = 0; $i < $fieldNumber; $i++){
-              $table .= "<td><strong>  ".mysqli_fetch_field_direct($result, $i)->name." </strong> </td>";
+              $table .= "<td><strong>".mysqli_fetch_field_direct($result, $i)->name." </strong></td>";
         }
         $table .= "</thead><tbody>";
         while($row = mysqli_fetch_assoc($result)){

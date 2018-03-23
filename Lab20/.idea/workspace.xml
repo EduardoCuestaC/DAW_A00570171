@@ -10,52 +10,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.php" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/index.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="utils.php" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/utils.php">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="212">
-              <caret line="518" column="0" lean-forward="true" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
-              <folding>
-                <marker date="1521178356165" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
-                <marker date="1521178356165" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
-                <marker date="1521178356165" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
-                <marker date="1521178356165" expanded="true" signature="4092:4204" ph="insert into entrada... " />
-                <marker date="1521178356165" expanded="true" signature="4437:4553" ph="insert into visitante... " />
-                <marker date="1521178356165" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
-                <marker date="1521178356165" expanded="true" signature="5917:6566" ph="insert into fiador... " />
-                <marker date="1521178356165" expanded="true" signature="7138:7254" ph="insert into visitante... " />
-                <marker date="1521178356165" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
-                <marker date="1521178356165" expanded="true" signature="9677:10388" ph="insert into credencial... " />
-                <marker date="1521178356165" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
-                <marker date="1521178356165" expanded="true" signature="13115:13182" ph="SELECT idVis... visitante" />
-                <marker date="1521178356165" expanded="true" signature="13505:13639" ph="INSERT INTO visitante_gradoestudios" />
-                <marker date="1521178356165" expanded="true" signature="14032:14109" ph="INSERT INTO autor... " />
-                <marker date="1521178356165" expanded="true" signature="14438:14694" ph="select idAut... autor" />
-                <marker date="1521178356165" expanded="true" signature="15016:15064" ph="INSERT INTO titulo... " />
-                <marker date="1521178356165" expanded="true" signature="15336:15477" ph="select idTit... " />
-                <marker date="1521178356165" expanded="true" signature="15812:15907" ph="INSERT INTO ejemplar... " />
-                <marker date="1521178356165" expanded="true" signature="16256:16569" ph="select ISBN,... " />
-                <marker date="1521178356165" expanded="true" signature="16905:16964" ph="INSERT INTO autor_titulo... " />
-                <marker date="1521178356165" expanded="true" signature="17251:17403" ph="select idAut... autor_titulo" />
-                <marker date="1521178356165" expanded="true" signature="17854:17963" ph="INSERT INTO ejemplar_credencial... " />
-                <marker date="1521178356165" expanded="true" signature="18773:18912" ph="UPDATE ejemplar_credencial... " />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300" />
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>build</find>
+      <find>connect</find>
+      <find>buildt</find>
+    </findStrings>
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
@@ -64,6 +26,7 @@
         <option value="$PROJECT_DIR$/visitors.php" />
         <option value="$PROJECT_DIR$/index.php" />
         <option value="$PROJECT_DIR$/utils.php" />
+        <option value="$PROJECT_DIR$/js/dynamicqueries_viewInfo.js" />
       </list>
     </option>
   </component>
@@ -95,6 +58,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -110,14 +75,22 @@
             <path>
               <item name="Lab20" type="b2602c69:ProjectViewProjectNode" />
               <item name="Lab20" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="jquery" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Lab20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab20" type="2a2b976b:PhpTreeStructureProvider$1" />
+              <item name="js" type="2a2b976b:PhpTreeStructureProvider$1" />
+            </path>
+            <path>
+              <item name="Lab20" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Lab20" type="2a2b976b:PhpTreeStructureProvider$1" />
               <item name="partials" type="2a2b976b:PhpTreeStructureProvider$1" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -155,17 +128,21 @@
       <workItem from="1521230329422" duration="310000" />
       <workItem from="1521494755029" duration="351000" />
       <workItem from="1521510196090" duration="903000" />
+      <workItem from="1521737880708" duration="6722000" />
+      <workItem from="1521828318192" duration="187000" />
+      <workItem from="1521828592125" duration="1463000" />
+      <workItem from="1521832459474" duration="5174000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="7117000" />
+    <option name="totallyTimeSpent" value="20663000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26573938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26573938" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Docker" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -196,11 +173,161 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dynamicqueries_viewInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="17" lean-forward="false" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="5644">
+          <caret line="332" column="0" lean-forward="false" selection-start-line="332" selection-start-column="0" selection-end-line="332" selection-end-column="0" />
+          <folding>
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dynamicqueries_viewInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="10" lean-forward="true" selection-start-line="2" selection-start-column="10" selection-end-line="2" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/utils.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8806">
+          <caret line="518" column="0" lean-forward="true" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+          <folding>
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/index.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -209,29 +336,29 @@
         <state relative-caret-position="3519">
           <caret line="207" column="0" lean-forward="true" selection-start-line="207" selection-start-column="0" selection-end-line="207" selection-end-column="0" />
           <folding>
-            <marker date="1521178356165" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
-            <marker date="1521178356165" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
-            <marker date="1521178356165" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
-            <marker date="1521178356165" expanded="true" signature="4092:4204" ph="insert into entrada... " />
-            <marker date="1521178356165" expanded="true" signature="4437:4553" ph="insert into visitante... " />
-            <marker date="1521178356165" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
-            <marker date="1521178356165" expanded="true" signature="5917:6566" ph="insert into fiador... " />
-            <marker date="1521178356165" expanded="true" signature="7138:7254" ph="insert into visitante... " />
-            <marker date="1521178356165" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
-            <marker date="1521178356165" expanded="true" signature="9677:10388" ph="insert into credencial... " />
-            <marker date="1521178356165" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
-            <marker date="1521178356165" expanded="true" signature="13115:13182" ph="SELECT idVis... visitante" />
-            <marker date="1521178356165" expanded="true" signature="13505:13639" ph="INSERT INTO visitante_gradoestudios" />
-            <marker date="1521178356165" expanded="true" signature="14032:14109" ph="INSERT INTO autor... " />
-            <marker date="1521178356165" expanded="true" signature="14438:14694" ph="select idAut... autor" />
-            <marker date="1521178356165" expanded="true" signature="15016:15064" ph="INSERT INTO titulo... " />
-            <marker date="1521178356165" expanded="true" signature="15336:15477" ph="select idTit... " />
-            <marker date="1521178356165" expanded="true" signature="15812:15907" ph="INSERT INTO ejemplar... " />
-            <marker date="1521178356165" expanded="true" signature="16256:16569" ph="select ISBN,... " />
-            <marker date="1521178356165" expanded="true" signature="16905:16964" ph="INSERT INTO autor_titulo... " />
-            <marker date="1521178356165" expanded="true" signature="17251:17403" ph="select idAut... autor_titulo" />
-            <marker date="1521178356165" expanded="true" signature="17854:17963" ph="INSERT INTO ejemplar_credencial... " />
-            <marker date="1521178356165" expanded="true" signature="18773:18912" ph="UPDATE ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
           </folding>
         </state>
       </provider>
@@ -240,7 +367,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -248,7 +374,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -256,7 +381,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -325,13 +449,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controller/entryInsert_controller.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controller/entrySearch_controller.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -381,50 +498,66 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/visitors.php">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/index.php">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="170">
           <caret line="10" column="0" lean-forward="false" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controller/entryInsert_controller.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/visitors.php">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="0" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/utils.php">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="212">
-          <caret line="518" column="0" lean-forward="true" selection-start-line="518" selection-start-column="0" selection-end-line="518" selection-end-column="0" />
+        <state relative-caret-position="289">
+          <caret line="108" column="30" lean-forward="false" selection-start-line="108" selection-start-column="30" selection-end-line="108" selection-end-column="30" />
           <folding>
-            <marker date="1521178356165" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
-            <marker date="1521178356165" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
-            <marker date="1521178356165" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
-            <marker date="1521178356165" expanded="true" signature="4092:4204" ph="insert into entrada... " />
-            <marker date="1521178356165" expanded="true" signature="4437:4553" ph="insert into visitante... " />
-            <marker date="1521178356165" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
-            <marker date="1521178356165" expanded="true" signature="5917:6566" ph="insert into fiador... " />
-            <marker date="1521178356165" expanded="true" signature="7138:7254" ph="insert into visitante... " />
-            <marker date="1521178356165" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
-            <marker date="1521178356165" expanded="true" signature="9677:10388" ph="insert into credencial... " />
-            <marker date="1521178356165" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
-            <marker date="1521178356165" expanded="true" signature="13115:13182" ph="SELECT idVis... visitante" />
-            <marker date="1521178356165" expanded="true" signature="13505:13639" ph="INSERT INTO visitante_gradoestudios" />
-            <marker date="1521178356165" expanded="true" signature="14032:14109" ph="INSERT INTO autor... " />
-            <marker date="1521178356165" expanded="true" signature="14438:14694" ph="select idAut... autor" />
-            <marker date="1521178356165" expanded="true" signature="15016:15064" ph="INSERT INTO titulo... " />
-            <marker date="1521178356165" expanded="true" signature="15336:15477" ph="select idTit... " />
-            <marker date="1521178356165" expanded="true" signature="15812:15907" ph="INSERT INTO ejemplar... " />
-            <marker date="1521178356165" expanded="true" signature="16256:16569" ph="select ISBN,... " />
-            <marker date="1521178356165" expanded="true" signature="16905:16964" ph="INSERT INTO autor_titulo... " />
-            <marker date="1521178356165" expanded="true" signature="17251:17403" ph="select idAut... autor_titulo" />
-            <marker date="1521178356165" expanded="true" signature="17854:17963" ph="INSERT INTO ejemplar_credencial... " />
-            <marker date="1521178356165" expanded="true" signature="18773:18912" ph="UPDATE ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="644:772" ph="SELECT usuar... usuario" />
+            <marker date="1521745488220" expanded="true" signature="1402:1416" ph="SELECT * FRO... ${$tableName}" />
+            <marker date="1521745488220" expanded="true" signature="3778:3916" ph="insert into visitante_gradoestudios... " />
+            <marker date="1521745488220" expanded="true" signature="4092:4204" ph="insert into entrada... " />
+            <marker date="1521745488220" expanded="true" signature="4437:4553" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="4982:5108" ph="insert into Fiador_GradoEstudios... " />
+            <marker date="1521745488220" expanded="true" signature="5917:6566" ph="insert into fiador... " />
+            <marker date="1521745488220" expanded="true" signature="7138:7254" ph="insert into visitante... " />
+            <marker date="1521745488220" expanded="true" signature="7596:7783" ph="insert into credencial_fiador... " />
+            <marker date="1521745488220" expanded="true" signature="9677:10388" ph="insert into credencial... " />
+            <marker date="1521745488220" expanded="true" signature="11266:12070" ph="select v.idV... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13112:13179" ph="SELECT idVis... visitante" />
+            <marker date="1521745488220" expanded="true" signature="13502:13636" ph="INSERT INTO visitante_gradoestudios" />
+            <marker date="1521745488220" expanded="true" signature="14029:14106" ph="INSERT INTO autor... " />
+            <marker date="1521745488220" expanded="true" signature="14435:14691" ph="select idAut... autor" />
+            <marker date="1521745488220" expanded="true" signature="15013:15061" ph="INSERT INTO titulo... " />
+            <marker date="1521745488220" expanded="true" signature="15333:15474" ph="select idTit... " />
+            <marker date="1521745488220" expanded="true" signature="15809:15904" ph="INSERT INTO ejemplar... " />
+            <marker date="1521745488220" expanded="true" signature="16253:16566" ph="select ISBN,... " />
+            <marker date="1521745488220" expanded="true" signature="16902:16961" ph="INSERT INTO autor_titulo... " />
+            <marker date="1521745488220" expanded="true" signature="17248:17400" ph="select idAut... autor_titulo" />
+            <marker date="1521745488220" expanded="true" signature="17851:17960" ph="INSERT INTO ejemplar_credencial... " />
+            <marker date="1521745488220" expanded="true" signature="18770:18909" ph="UPDATE ejemplar_credencial... " />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/js/dynamicqueries_viewInfo.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="243">
+          <caret line="86" column="0" lean-forward="true" selection-start-line="86" selection-start-column="0" selection-end-line="86" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
