@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utf-8">
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<div class="container">
+    <h3>Google Maps API</h3>
+    <p>
+        Los marcadores pueden arrastrarse y cliquearse (para hacer zoom).
+        También pueden añadirse marcadores nuevos.
+    </p>
+    <div id="map"></div>
+    <br>
+    <div class="text-center">
+    <button class="btn btn-danger" type="button" id="addMarkerButton">Agregar marcador</button>
+    </div>
+    <br>
+    <br>
+    <p>
+        Integrar servicios web desarrollados por terceros puede permitir la adopción rápida y sencilla de una gran cantidad de funcionalidades
+        potencialmente complejas de programar, y recorta los tiempos de desarrollo. Puede resultar inconveniente por el escaso grado
+        de personalización que puede tenerse sobre un servicio web externo, o presentar dificultades por problemas con el mantenimiento
+        del servicio.
+    </p>
+
+
+    <script src="script.js"></script>
+    <script async defer
+            src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDr7xP2INp9HbVHgnvnZeJR-k4uS8ex3ic&callback=initMap">
+    </script>
+</div>
+</body>
+</html>

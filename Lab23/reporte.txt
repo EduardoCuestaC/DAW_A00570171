@@ -1,0 +1,72 @@
+1- ¿Que pasa cuando deseas realizar esta consulta? 
+La tabla puede accederse sin problemas.
+
+2- ¿Qué pasa cuando deseas realizar esta consulta? 
+No es posible hacer la consulta desde una sesión distinta a la que inició la
+transacción, pues los campos están siendo bloqueados para uso exclusivo de la
+primera sesión hasta que la transacción finalice.
+
+3- Explica por qué ocurre dicho evento. 
+Sí es posible acceder a los datos, pues el bloqueo por la transacción solo
+abarca las filas que están actualmente en uso.
+
+4- ¿Qué ocurrió y por qué? 
+No se guardaron los cambios de la transacción en la tabla, pues el rollback
+regresó la base de datos a su estado antes de la transacción.
+
+5- ¿Para qué sirve el comando @@ERROR revisa la ayuda en línea? 
+Sirve para detectar si ocurrió un error durante la transacción
+
+6- ¿Explica qué hace la transacción?
+Inserta dos entradas válidas (no tienen un id ocupado) y una inválida 
+en la tabla clientes_banca. Si hay algún error, la transacción se cancela.
+
+7-¿Hubo alguna modificación en la tabla? Explica qué pasó y por qué.
+No, pues se detectó un error y se hizo rollback.
+
+8- Consultas:
+RETIRO:
+
+IF EXISTS (SELECT name FROM sysobjects 
+            WHERE name = 'registar_retiro_cajero' AND type = 'P')
+    DROP PROCEDURE registar_retiro_cajero
+GO
+CREATE PROCEDURE registar_retiro_cajero
+    @uNoCuenta varchar(5),
+    @uMonto numeric(10, 2)
+AS
+    BEGIN TRANSACTION rrct
+	insert into Movimiento values(@uNoCuenta, 'A', CURRENT_TIMESTAMP, @uMonto)
+
+	IF @@ERROR = 0
+	COMMIT TRANSACTION rrct
+	ELSE
+	BEGIN
+	PRINT 'A transaction needs to be rolled back'
+	ROLLBACK TRANSACTION rrct
+	END
+GO
+
+
+
+DEPÓSITO:
+
+IF EXISTS (SELECT name FROM sysobjects 
+            WHERE name = 'registar_deposito_ventanilla' AND type = 'P')
+    DROP PROCEDURE registar_deposito_ventanilla
+GO
+CREATE PROCEDURE registar_deposito_ventanilla
+    @uNoCuenta varchar(5),
+    @uMonto numeric(10, 2)
+AS
+    BEGIN TRANSACTION rdvt
+	insert into Movimiento values(@uNoCuenta, 'B', CURRENT_TIMESTAMP, @uMonto)
+
+	IF @@ERROR = 0
+	COMMIT TRANSACTION rdvt
+	ELSE
+	BEGIN
+	PRINT 'A transaction needs to be rolled back'
+	ROLLBACK TRANSACTION rdvt
+	END
+GO
