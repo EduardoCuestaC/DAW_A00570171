@@ -3,7 +3,7 @@ if(count($_POST)<=0)
     return;
 $h = curl_init();
 $s = $_POST["word"];
-curl_setopt($h, CURLOPT_URL, "http://".$_SERVER["HTTP_HOST"]."/Labs/Lab24_servicio/public/words");
+curl_setopt($h, CURLOPT_URL, "http://".$_SERVER["HTTP_HOST"].preg_replace("/\/Lab24_cliente\/insert.php/","",$_SERVER["REQUEST_URI"])."/Lab24_servicio/public/words");
 curl_setopt($h, CURLOPT_CUSTOMREQUEST, "POST");
 curl_setopt($h, CURLOPT_POSTFIELDS, $s);
 curl_setopt($h, CURLOPT_HTTPHEADER, array(
