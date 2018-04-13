@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+<div class="container">
+    <br>
+    <h4>>>El servicio y el cliente deben estar en el mismo host<<</h4>
+    <br>
+    <br>
+    <form method="post" action="insert.php">
+        <h4>Agregar una palabra</h4>
+        <div class="form-group">
+            <label>Palabra:</label>
+            <input name="word" class="form-control" type="text">
+        </div>
+        <button class="btn btn-success" type="submit">Agregar</button>
+    </form>
+    <br>
+    <br>
+    <form method="post" action="delete.php">
+        <h4>Eliminar una palabra</h4>
+        <div class="form-group">
+            <label>Número de la palabra a eliminar</label>
+            <input name="word" class="form-control" type="number">
+        </div>
+        <button class="btn btn-danger" type="submit">Eliminar</button>
+    </form>
+    <br>
+    <br>
+    <h4>Lista de palabras: </h4>
